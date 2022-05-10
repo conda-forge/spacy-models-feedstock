@@ -10,9 +10,6 @@ DEV_URL = "https://github.com/explosion/spacy-models"
 VERSION = "3.3.0"
 HEAD = "3d347dfd1755a004cf9b686edbffbfbec51515d8"
 
-# TODO: current fails if building _everything_ at once, restore when smaller
-# SIZE_PATTERN = "*"
-SIZE_PATTERN = "*_sm"
 SKIP_PATTERNS = [
     # needs sudachipy
     "ja_core*"
@@ -24,8 +21,7 @@ EXTRA_REQS = {
 
 HERE = Path(__file__).parent
 REPO = HERE.parent / "_spacy_models_repo"
-TMPL = HERE / "meta.yaml.j2"
-META = HERE / "meta.yaml"
+TMPL = HERE.glob("*.j2")
 
 
 def reqtify(raw):
@@ -46,31 +42,38 @@ def ensure_repo():
 def update_recipe():
     all_metas = {
         p: json.load(p.open())
-        for p in sorted((REPO / "meta").glob(f"{SIZE_PATTERN}-{VERSION}.json"))
+        for p in sorted((REPO / "meta").glob(f"*-{VERSION}.json"))
         if not any([fnmatch.fnmatch(p.name, pattern) for pattern in SKIP_PATTERNS])
     }
 
+    lang_metas = {}
+
     for path, meta in all_metas.items():
+        lang_metas.setdefault(meta["lang"], {})[path] = meta
         for pattern, extra_reqs in EXTRA_REQS.items():
             if any(pattern in req for req in meta["requirements"]):
                 print(f"""- {path.name} needs extra: {", ".join(extra_reqs)}""")
                 meta["requirements"] += extra_reqs
         meta["requirements"] = sorted(set(meta["requirements"]))
 
-    template = jinja2.Template(
-        TMPL.read_text(encoding="utf-8").strip(),
-        # use alternate template delimiters to avoid conflicts
-        block_start_string="<%",
-        block_end_string="%>",
-        variable_start_string="<<",
-        variable_end_string=">>",
-    )
-
     context = dict(
-        all_metas=all_metas, reqtify=reqtify, version=VERSION, dev_url=DEV_URL
+        lang_metas=lang_metas, reqtify=reqtify, version=VERSION, dev_url=DEV_URL
     )
 
-    META.write_text(template.render(**context).strip() + "\n", encoding="utf-8")
+    for tmpl_path in TMPL:
+        dest_path = tmpl_path.parent / tmpl_path.name.replace(".j2", "")
+        template = jinja2.Template(
+            tmpl_path.read_text(encoding="utf-8").strip(),
+            # use alternate template delimiters to avoid conflicts
+            block_start_string="<%",
+            block_end_string="%>",
+            variable_start_string="<<",
+            variable_end_string=">>",
+        )
+
+        dest_path.write_text(
+            template.render(**context).strip() + "\n", encoding="utf-8"
+        )
 
 
 def lint_recipe():
