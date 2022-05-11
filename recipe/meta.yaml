@@ -11,7 +11,7 @@ source:
   - url: https://raw.githubusercontent.com/explosion/spaCy/master/LICENSE
     sha256: c07800e058b1b544eb9d47dd81687582fe6830c1ddc47f57521fc93628685915
 
-{% if spacy_lang == "ca" %}
+{% if spacy_lang == "ca"  or not (spacy_lang is defined) %}
   - url: https://github.com/explosion/spacy-models/releases/download/ca_core_news_lg-{{ version }}/ca_core_news_lg-{{ version }}.tar.gz
     sha256: 1428659601e3375a44349e993571db34114f84921b48f49add0707366069be19
     folder: ca_core_news_lg
@@ -348,7 +348,7 @@ test:
 
 outputs:
 
-{% if spacy_lang == "ca" %}
+{% if spacy_lang == "ca"  or not (spacy_lang is defined) %}
   - name: spacy-model-ca_core_news_lg
     build:
       noarch: python
