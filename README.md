@@ -7,9 +7,9 @@ Package license:
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/spacy-models-feedstock/blob/main/LICENSE.txt)
 
-Summary: Catalan pipeline optimized for CPU.
+Summary: Portuguese pipeline optimized for CPU.
 
-Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler, lemmatizer.
+Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
 
 Current build status
 ====================
