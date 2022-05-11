@@ -10,15 +10,19 @@ package:
 source:
   - url: https://raw.githubusercontent.com/explosion/spaCy/master/LICENSE
     sha256: c07800e058b1b544eb9d47dd81687582fe6830c1ddc47f57521fc93628685915
-<% for p, m in all_metas.items() %>
+<% for lang, metas in lang_metas.items() %>
+{% if spacy_lang == "<< lang >>" <% if not loop.index0 %> or not (spacy_lang is defined) <% endif %>%}
+<%- for p, m in metas.items() %>
   - url: https://github.com/explosion/spacy-models/releases/download/<<m.lang >>_<< m.name >>-{{ version }}/<< m.lang >>_<< m.name >>-{{ version }}.tar.gz
     sha256: << m.checksum >>
     folder: <<m.lang >>_<< m.name >>
+<% endfor -%>
+{% endif %}  # << lang >>
 <% endfor %>
 
 build:
   noarch: python
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -33,7 +37,9 @@ test:
     - echo "tests in subdir"
 
 outputs:
-<% for p, m in all_metas.items() %>
+<% for lang, metas in lang_metas.items() %>
+{% if spacy_lang == "<< lang >>" <% if not loop.index0 %> or not (spacy_lang is defined) <% endif %>%}
+<%- for p, m in metas.items() %>
   - name: spacy-model-<< m.lang >>_<< m.name >>
     build:
       noarch: python
@@ -64,6 +70,8 @@ outputs:
       license_file:
         - << m.lang >>_<< m.name >>/LICENSE
         - << m.lang >>_<< m.name >>/LICENSES_SOURCES
+<% endfor -%>
+{% endif %}  # << lang >>
 <% endfor %>
 
 about:
