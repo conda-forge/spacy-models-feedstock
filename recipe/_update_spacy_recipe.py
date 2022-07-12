@@ -7,8 +7,9 @@ import fnmatch
 import re
 
 DEV_URL = "https://github.com/explosion/spacy-models"
-VERSION = "3.3.0"
-HEAD = "3d347dfd1755a004cf9b686edbffbfbec51515d8"
+VERSION = "3.4.0"
+HEAD = "125c74d3ba00db1ac85c690112c210e0f13a6911"
+BUILD_NUMBER = "0"
 
 SKIP_PATTERNS = [
     # needs sudachipy
@@ -16,7 +17,7 @@ SKIP_PATTERNS = [
 ]
 EXTRA_REQS = {
     # TODO: remove after https://github.com/conda-forge/spacy-pkuseg-feedstock/pull/11
-    "spacy-pkuseg": ["cython"]
+    # "spacy-pkuseg": ["cython"]
 }
 
 HERE = Path(__file__).parent
@@ -57,7 +58,11 @@ def update_recipe():
         meta["requirements"] = sorted(set(meta["requirements"]))
 
     context = dict(
-        lang_metas=lang_metas, reqtify=reqtify, version=VERSION, dev_url=DEV_URL
+        lang_metas=lang_metas,
+        reqtify=reqtify,
+        version=VERSION,
+        dev_url=DEV_URL,
+        build_number=BUILD_NUMBER,
     )
 
     for tmpl_path in TMPL:
