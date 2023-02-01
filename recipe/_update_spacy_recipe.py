@@ -13,7 +13,9 @@ BUILD_NUMBER = "0"
 
 SKIP_PATTERNS = [
     # needs sudachipy
-    "ja_core*"
+    "ja_core*",
+    # needs pymorphy3
+    "ru_core_*",
 ]
 EXTRA_REQS = {
     # TODO: remove after https://github.com/conda-forge/spacy-pkuseg-feedstock/pull/11
