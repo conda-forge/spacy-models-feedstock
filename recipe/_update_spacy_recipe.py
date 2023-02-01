@@ -11,10 +11,11 @@ VERSION = "3.5.0"
 HEAD = "0a3c186dc76a96b4118e4b204c73ac103b9d8e3d"
 BUILD_NUMBER = "0"
 
+# see https://github.com/conda-forge/spacy-models-feedstock/issues/2
 SKIP_PATTERNS = [
-    # needs sudachipy
+    # needs sudachipy https://github.com/conda-forge/staged-recipes/issues/18871
     "ja_core*",
-    # needs pymorphy3
+    # needs pymorphy3 https://github.com/conda-forge/staged-recipes/issues/21931
     "ru_core_*",
 ]
 EXTRA_REQS = {
