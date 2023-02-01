@@ -7,8 +7,8 @@ import fnmatch
 import re
 
 DEV_URL = "https://github.com/explosion/spacy-models"
-VERSION = "3.4.0"
-HEAD = "125c74d3ba00db1ac85c690112c210e0f13a6911"
+VERSION = "3.5.0"
+HEAD = "0a3c186dc76a96b4118e4b204c73ac103b9d8e3d"
 BUILD_NUMBER = "0"
 
 SKIP_PATTERNS = [
