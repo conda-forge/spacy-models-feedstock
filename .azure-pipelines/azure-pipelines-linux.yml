@@ -80,10 +80,6 @@ jobs:
         CONFIG: linux_64_spacy_langro
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_spacy_langru:
-        CONFIG: linux_64_spacy_langru
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_spacy_langsv:
         CONFIG: linux_64_spacy_langsv
         UPLOAD_PACKAGES: 'True'

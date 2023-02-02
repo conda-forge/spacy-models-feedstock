@@ -7,17 +7,36 @@ import fnmatch
 import re
 
 DEV_URL = "https://github.com/explosion/spacy-models"
-VERSION = "3.4.0"
-HEAD = "125c74d3ba00db1ac85c690112c210e0f13a6911"
+VERSION = "3.5.0"
+HEAD = "0a3c186dc76a96b4118e4b204c73ac103b9d8e3d"
 BUILD_NUMBER = "0"
 
+# see https://github.com/conda-forge/spacy-models-feedstock/issues/2
 SKIP_PATTERNS = [
-    # needs sudachipy
-    "ja_core*"
+    # needs sudachipy https://github.com/conda-forge/staged-recipes/issues/18871
+    "ja_core*",
+    # needs pymorphy3 https://github.com/conda-forge/staged-recipes/issues/21931
+    "ru_core_*",
+    "uk_core_*",
 ]
-EXTRA_REQS = {
-    # TODO: remove after https://github.com/conda-forge/spacy-pkuseg-feedstock/pull/11
-    # "spacy-pkuseg": ["cython"]
+SKIP_PIP_CHECK = {
+    # Example (keep this for the future)
+    #
+    # "fr": {
+    #     "dep_news_trf": "transformers 4.19.4 has requirement tokenizers!=0.11.3,<0.13,>=0.11.1, but you have tokenizers 0.13.2."
+    # }
+}
+EXTRA_SUBREQS = {
+    # Example (keep this for the future)
+    #
+    ## TODO: remove after
+    ##       https://github.com/conda-forge/spacy-pkuseg-feedstock/pull/11
+    ## "spacy-pkuseg": ["cython"]
+}
+EXTRA_PKG_REQS = {
+    # TODO: investigate
+    # ImportError: tokenizers>=0.11.1,!=0.11.3,<0.13 is required for a normal functioning of this module, but found tokenizers==0.13.2.
+    ("fr", "dep_news_trf"): ["tokenizers >=0.11.1,!=0.11.3,<0.13"]
 }
 
 HERE = Path(__file__).parent
@@ -51,10 +70,16 @@ def update_recipe():
 
     for path, meta in all_metas.items():
         lang_metas.setdefault(meta["lang"], {})[path] = meta
-        for pattern, extra_reqs in EXTRA_REQS.items():
-            if any(pattern in req for req in meta["requirements"]):
-                print(f"""- {path.name} needs extra: {", ".join(extra_reqs)}""")
-                meta["requirements"] += extra_reqs
+        for pattern, extra_reqs in EXTRA_SUBREQS.items():
+            for req in meta["requirements"]:
+                if pattern in req:
+                    print(
+                        f"""- {path.name}:{req} needs extra: {", ".join(extra_reqs)}"""
+                    )
+                    meta["requirements"] += extra_reqs
+
+        meta["requirements"] += EXTRA_PKG_REQS.get((meta["lang"], meta["name"]), [])
+
         meta["requirements"] = sorted(set(meta["requirements"]))
 
     context = dict(
@@ -63,6 +88,7 @@ def update_recipe():
         version=VERSION,
         dev_url=DEV_URL,
         build_number=BUILD_NUMBER,
+        skip_pip_check=SKIP_PIP_CHECK,
     )
 
     for tmpl_path in TMPL:
