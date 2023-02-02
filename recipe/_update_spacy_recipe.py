@@ -20,16 +20,23 @@ SKIP_PATTERNS = [
     "uk_core_*",
 ]
 SKIP_PIP_CHECK = {
-    "fr": {
-        "dep_news_trf": "transformers 4.19.4 has requirement tokenizers!=0.11.3,<0.13,>=0.11.1, but you have tokenizers 0.13.2."
-    }
+    # Example (keep this for the future)
+    #
+    # "fr": {
+    #     "dep_news_trf": "transformers 4.19.4 has requirement tokenizers!=0.11.3,<0.13,>=0.11.1, but you have tokenizers 0.13.2."
+    # }
 }
-EXTRA_REQS = {
+EXTRA_SUBREQS = {
     # Example (keep this for the future)
     #
     ## TODO: remove after
     ##       https://github.com/conda-forge/spacy-pkuseg-feedstock/pull/11
     ## "spacy-pkuseg": ["cython"]
+}
+EXTRA_PKG_REQS = {
+    # TODO: investigate
+    # ImportError: tokenizers>=0.11.1,!=0.11.3,<0.13 is required for a normal functioning of this module, but found tokenizers==0.13.2.
+    ("fr", "dep_news_trf"): ["tokenizers >=0.11.1,!=0.11.3,<0.13"]
 }
 
 HERE = Path(__file__).parent
@@ -63,13 +70,16 @@ def update_recipe():
 
     for path, meta in all_metas.items():
         lang_metas.setdefault(meta["lang"], {})[path] = meta
-        for pattern, extra_reqs in EXTRA_REQS.items():
+        for pattern, extra_reqs in EXTRA_SUBREQS.items():
             for req in meta["requirements"]:
                 if pattern in req:
                     print(
                         f"""- {path.name}:{req} needs extra: {", ".join(extra_reqs)}"""
                     )
                     meta["requirements"] += extra_reqs
+
+        meta["requirements"] += EXTRA_PKG_REQS.get((meta["lang"], meta["name"]), [])
+
         meta["requirements"] = sorted(set(meta["requirements"]))
 
     context = dict(

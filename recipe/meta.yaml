@@ -1228,14 +1228,14 @@ outputs:
         - protobuf<3.21.0
         - sentencepiece >=0.1.91,!=0.1.92
         - spacy-transformers >=1.2.0.dev0,<1.3.0
+        - tokenizers  >=0.11.1,!=0.11.3,<0.13
     test:
       imports:
         - fr_dep_news_trf
       requires:
         - pip
       commands:
-        # TODO: fix pip check
-        #       transformers 4.19.4 has requirement tokenizers!=0.11.3,<0.13,>=0.11.1, but you have tokenizers 0.13.2.
+        - pip check
         - python -c "__import__('fr_dep_news_trf').load()"
         - python -c "__import__('spacy').load('fr_dep_news_trf')"
     about:
