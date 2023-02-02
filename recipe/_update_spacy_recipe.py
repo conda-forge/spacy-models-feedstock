@@ -17,10 +17,19 @@ SKIP_PATTERNS = [
     "ja_core*",
     # needs pymorphy3 https://github.com/conda-forge/staged-recipes/issues/21931
     "ru_core_*",
+    "uk_core_*",
 ]
+SKIP_PIP_CHECK = {
+    "fr": {
+        "dep_news_trf": "transformers 4.19.4 has requirement tokenizers!=0.11.3,<0.13,>=0.11.1, but you have tokenizers 0.13.2."
+    }
+}
 EXTRA_REQS = {
-    # TODO: remove after https://github.com/conda-forge/spacy-pkuseg-feedstock/pull/11
-    # "spacy-pkuseg": ["cython"]
+    # Example (keep this for the future)
+    #
+    ## TODO: remove after
+    ##       https://github.com/conda-forge/spacy-pkuseg-feedstock/pull/11
+    ## "spacy-pkuseg": ["cython"]
 }
 
 HERE = Path(__file__).parent
@@ -55,9 +64,12 @@ def update_recipe():
     for path, meta in all_metas.items():
         lang_metas.setdefault(meta["lang"], {})[path] = meta
         for pattern, extra_reqs in EXTRA_REQS.items():
-            if any(pattern in req for req in meta["requirements"]):
-                print(f"""- {path.name} needs extra: {", ".join(extra_reqs)}""")
-                meta["requirements"] += extra_reqs
+            for req in meta["requirements"]:
+                if pattern in req:
+                    print(
+                        f"""- {path.name}:{req} needs extra: {", ".join(extra_reqs)}"""
+                    )
+                    meta["requirements"] += extra_reqs
         meta["requirements"] = sorted(set(meta["requirements"]))
 
     context = dict(
@@ -66,6 +78,7 @@ def update_recipe():
         version=VERSION,
         dev_url=DEV_URL,
         build_number=BUILD_NUMBER,
+        skip_pip_check=SKIP_PIP_CHECK,
     )
 
     for tmpl_path in TMPL:
