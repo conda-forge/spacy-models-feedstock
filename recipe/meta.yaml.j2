@@ -6,6 +6,7 @@
 # see https://github.com/explosion/spacy-models/blob/master/compatibility.json
 # but the pattern _generally_ seems to be x.x
 {% set spacy = "==" + (".".join(version.split(".")[:2])) + ".*" %}
+{% set python_min = python_min|default("3.9") %}
 
 package:
   name: spacy-models
@@ -30,11 +31,11 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}.*
     - pip
-  run:
     - setuptools
-    - python >=3.6
+  run:
+    - python >={{ python_min }}
 
 test:
   commands:
@@ -51,10 +52,11 @@ outputs:
         - cd << m.lang >>_<< m.name >> && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}<% for req in m.requirements %>
         - << reqtify(req)  >>
         <%- endfor %>
@@ -62,6 +64,7 @@ outputs:
       imports:
         - << m.lang >>_<< m.name >>
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         <%- if skip_pip_check.get(m.lang, {}).get(m.name) %>

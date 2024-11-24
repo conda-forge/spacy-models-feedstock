@@ -7,8 +7,8 @@ import fnmatch
 import re
 
 DEV_URL = "https://github.com/explosion/spacy-models"
-VERSION = "3.5.0"
-HEAD = "0a3c186dc76a96b4118e4b204c73ac103b9d8e3d"
+VERSION = "3.8.0"
+HEAD = "3d026eec88c53128ed71e10b399d0084361a11a3"
 BUILD_NUMBER = "0"
 
 # see https://github.com/conda-forge/spacy-models-feedstock/issues/2
