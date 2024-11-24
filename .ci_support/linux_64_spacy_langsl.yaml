@@ -15,4 +15,4 @@ python:
 python_min:
 - '3.9'
 spacy_lang:
-- ro
+- sl
