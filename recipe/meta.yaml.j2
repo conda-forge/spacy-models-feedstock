@@ -14,7 +14,7 @@ package:
 
 source:
   - url: https://raw.githubusercontent.com/explosion/spaCy/master/LICENSE
-    sha256: c07800e058b1b544eb9d47dd81687582fe6830c1ddc47f57521fc93628685915
+    sha256: 3f4378e67708fecacd3e27651c8bc0f977cf20789e19da0d81a2840e7cf573a2
 <% for lang, metas in lang_metas.items() %>
 {% if spacy_lang == "<< lang >>" <% if not loop.index0 %> or not (spacy_lang is defined) <% endif %>%}
 <%- for p, m in metas.items() %>
