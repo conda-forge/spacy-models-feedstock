@@ -6,6 +6,7 @@
 # see https://github.com/explosion/spacy-models/blob/master/compatibility.json
 # but the pattern _generally_ seems to be x.x
 {% set spacy = "==" + (".".join(version.split(".")[:2])) + ".*" %}
+{% set python_min = python_min|default("3.9") %}
 
 package:
   name: spacy-models
@@ -13,7 +14,7 @@ package:
 
 source:
   - url: https://raw.githubusercontent.com/explosion/spaCy/master/LICENSE
-    sha256: 3f4378e67708fecacd3e27651c8bc0f977cf20789e19da0d81a2840e7cf573a2
+    sha256: c07800e058b1b544eb9d47dd81687582fe6830c1ddc47f57521fc93628685915
 
 {% if spacy_lang == "ca"  or not (spacy_lang is defined) %}
   - url: https://github.com/explosion/spacy-models/releases/download/ca_core_news_lg-{{ version }}/ca_core_news_lg-{{ version }}.tar.gz
@@ -291,6 +292,24 @@ source:
     folder: ro_core_news_sm
 {% endif %}  # ro
 
+{% if spacy_lang == "sl" %}
+  - url: https://github.com/explosion/spacy-models/releases/download/sl_core_news_lg-{{ version }}/sl_core_news_lg-{{ version }}.tar.gz
+    sha256: 6434a08a84c49ef281834a9a10f5743c2919726290dd4cdd83dd070bd6df0c06
+    folder: sl_core_news_lg
+
+  - url: https://github.com/explosion/spacy-models/releases/download/sl_core_news_md-{{ version }}/sl_core_news_md-{{ version }}.tar.gz
+    sha256: fdab709a9fddbb2f2a1a8d5e8de79114052297de498cfdac79ae33d8ef6a4ed7
+    folder: sl_core_news_md
+
+  - url: https://github.com/explosion/spacy-models/releases/download/sl_core_news_sm-{{ version }}/sl_core_news_sm-{{ version }}.tar.gz
+    sha256: bc17dfb5a83391ccdc0278c2cdc914790e5433a43befc40ade47133561067f1e
+    folder: sl_core_news_sm
+
+  - url: https://github.com/explosion/spacy-models/releases/download/sl_core_news_trf-{{ version }}/sl_core_news_trf-{{ version }}.tar.gz
+    sha256: f56260e7ef78f9bdda3bbf8728323bc220441a7bb1d787fffcaaabaeaf85b1c5
+    folder: sl_core_news_trf
+{% endif %}  # sl
+
 {% if spacy_lang == "sv" %}
   - url: https://github.com/explosion/spacy-models/releases/download/sv_core_news_lg-{{ version }}/sv_core_news_lg-{{ version }}.tar.gz
     sha256: 82a4b3d96e643f9d5c559536a7d6e500a35504aaf84d31b42cc415bbd3f4e788
@@ -340,11 +359,11 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}.*
     - pip
-  run:
     - setuptools
-    - python >=3.6
+  run:
+    - python >={{ python_min }}
 
 test:
   commands:
@@ -360,15 +379,17 @@ outputs:
         - cd ca_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - ca_core_news_lg
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -389,15 +410,17 @@ outputs:
         - cd ca_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - ca_core_news_md
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -418,15 +441,17 @@ outputs:
         - cd ca_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - ca_core_news_sm
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -447,23 +472,25 @@ outputs:
         - cd ca_core_news_trf && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
-        - spacy-transformers >=1.2.0.dev0,<1.3.0
+        - spacy-curated-transformers >=0.2.2,<1.0.0
     test:
       imports:
         - ca_core_news_trf
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
         - python -c "__import__('ca_core_news_trf').load()"
         - python -c "__import__('spacy').load('ca_core_news_trf')"
     about:
-      summary: Catalan transformer pipeline (projecte-aina/roberta-base-ca-v2).
+      summary: Catalan transformer pipeline (Transformer(name='projecte-aina/roberta-base-ca-v2', piece_encoder='byte-bpe', stride=112, type='roberta', width=768, window=144, vocab_size=50262)).
       description: |-
         Components: transformer, morphologizer, parser, ner, attribute_ruler, lemmatizer.
       license_file:
@@ -479,15 +506,17 @@ outputs:
         - cd da_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - da_core_news_lg
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -508,15 +537,17 @@ outputs:
         - cd da_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - da_core_news_md
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -537,15 +568,17 @@ outputs:
         - cd da_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - da_core_news_sm
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -566,23 +599,25 @@ outputs:
         - cd da_core_news_trf && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
-        - spacy-transformers >=1.2.0.dev0,<1.3.0
+        - spacy-curated-transformers >=0.2.2,<1.0.0
     test:
       imports:
         - da_core_news_trf
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
         - python -c "__import__('da_core_news_trf').load()"
         - python -c "__import__('spacy').load('da_core_news_trf')"
     about:
-      summary: Danish transformer pipeline (Maltehb/danish-bert-botxo).
+      summary: Danish transformer pipeline (Transformer(name='vesteinn/DanskBERT', piece_encoder='xlm-roberta-sentencepiece', stride=120, type='xlm-roberta', width=768, window=152, vocab_size=50005)).
       description: |-
         Components: transformer, morphologizer, parser, lemmatizer (trainable_lemmatizer), ner, attribute_ruler.
       license_file:
@@ -598,15 +633,17 @@ outputs:
         - cd de_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - de_core_news_lg
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -627,15 +664,17 @@ outputs:
         - cd de_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - de_core_news_md
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -656,15 +695,17 @@ outputs:
         - cd de_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - de_core_news_sm
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -685,23 +726,25 @@ outputs:
         - cd de_dep_news_trf && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
-        - spacy-transformers >=1.2.0.dev0,<1.3.0
+        - spacy-curated-transformers >=0.2.2,<1.0.0
     test:
       imports:
         - de_dep_news_trf
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
         - python -c "__import__('de_dep_news_trf').load()"
         - python -c "__import__('spacy').load('de_dep_news_trf')"
     about:
-      summary: German transformer pipeline (bert-base-german-cased).
+      summary: German transformer pipeline (Transformer(name='bert-base-german-cased', piece_encoder='bert-wordpiece', stride=136, type='bert', width=768, window=176, vocab_size=30000)).
       description: |-
         Components: transformer, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer).
       license_file:
@@ -717,15 +760,17 @@ outputs:
         - cd el_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - el_core_news_lg
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -746,15 +791,17 @@ outputs:
         - cd el_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - el_core_news_md
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -775,15 +822,17 @@ outputs:
         - cd el_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - el_core_news_sm
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -806,15 +855,17 @@ outputs:
         - cd en_core_web_lg && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - en_core_web_lg
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -835,15 +886,17 @@ outputs:
         - cd en_core_web_md && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - en_core_web_md
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -864,15 +917,17 @@ outputs:
         - cd en_core_web_sm && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - en_core_web_sm
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -893,23 +948,25 @@ outputs:
         - cd en_core_web_trf && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
-        - spacy-transformers >=1.2.0.dev0,<1.3.0
+        - spacy-curated-transformers >=0.2.2,<1.0.0
     test:
       imports:
         - en_core_web_trf
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
         - python -c "__import__('en_core_web_trf').load()"
         - python -c "__import__('spacy').load('en_core_web_trf')"
     about:
-      summary: English transformer pipeline (roberta-base).
+      summary: English transformer pipeline (Transformer(name='roberta-base', piece_encoder='byte-bpe', stride=104, type='roberta', width=768, window=144, vocab_size=50265)).
       description: |-
         Components: transformer, tagger, parser, ner, attribute_ruler, lemmatizer.
       license_file:
@@ -925,15 +982,17 @@ outputs:
         - cd es_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - es_core_news_lg
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -954,15 +1013,17 @@ outputs:
         - cd es_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - es_core_news_md
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -983,15 +1044,17 @@ outputs:
         - cd es_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - es_core_news_sm
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -1012,23 +1075,25 @@ outputs:
         - cd es_dep_news_trf && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
-        - spacy-transformers >=1.2.0.dev0,<1.3.0
+        - spacy-curated-transformers >=0.2.2,<1.0.0
     test:
       imports:
         - es_dep_news_trf
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
         - python -c "__import__('es_dep_news_trf').load()"
         - python -c "__import__('spacy').load('es_dep_news_trf')"
     about:
-      summary: Spanish transformer pipeline (dccuchile/bert-base-spanish-wwm-cased).
+      summary: Spanish transformer pipeline (Transformer(name='dccuchile/bert-base-spanish-wwm-cased', piece_encoder='bert-wordpiece', stride=112, type='bert', width=768, window=158, vocab_size=31002)).
       description: |-
         Components: transformer, morphologizer, parser, attribute_ruler, lemmatizer.
       license_file:
@@ -1044,15 +1109,17 @@ outputs:
         - cd fi_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - fi_core_news_lg
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -1073,15 +1140,17 @@ outputs:
         - cd fi_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - fi_core_news_md
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -1102,15 +1171,17 @@ outputs:
         - cd fi_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - fi_core_news_sm
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -1133,15 +1204,17 @@ outputs:
         - cd fr_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - fr_core_news_lg
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -1162,15 +1235,17 @@ outputs:
         - cd fr_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - fr_core_news_md
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -1191,15 +1266,17 @@ outputs:
         - cd fr_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - fr_core_news_sm
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -1220,26 +1297,28 @@ outputs:
         - cd fr_dep_news_trf && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
         - protobuf<3.21.0
         - sentencepiece >=0.1.91,!=0.1.92
-        - spacy-transformers >=1.2.0.dev0,<1.3.0
+        - spacy-curated-transformers >=0.2.2,<1.0.0
         - tokenizers  >=0.11.1,!=0.11.3,<0.13
     test:
       imports:
         - fr_dep_news_trf
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
         - python -c "__import__('fr_dep_news_trf').load()"
         - python -c "__import__('spacy').load('fr_dep_news_trf')"
     about:
-      summary: French transformer pipeline (camembert-base).
+      summary: French transformer pipeline (Transformer(name='camembert-base', piece_encoder='camembert-sentencepiece', stride=128, type='camembert', width=768, window=168, vocab_size=32005)).
       description: |-
         Components: transformer, morphologizer, parser, attribute_ruler, lemmatizer.
       license_file:
@@ -1255,15 +1334,17 @@ outputs:
         - cd hr_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - hr_core_news_lg
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -1284,15 +1365,17 @@ outputs:
         - cd hr_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - hr_core_news_md
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -1313,15 +1396,17 @@ outputs:
         - cd hr_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - hr_core_news_sm
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -1344,15 +1429,17 @@ outputs:
         - cd it_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - it_core_news_lg
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -1373,15 +1460,17 @@ outputs:
         - cd it_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - it_core_news_md
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -1402,15 +1491,17 @@ outputs:
         - cd it_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - it_core_news_sm
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -1433,15 +1524,17 @@ outputs:
         - cd ko_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - ko_core_news_lg
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -1462,15 +1555,17 @@ outputs:
         - cd ko_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - ko_core_news_md
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -1491,15 +1586,17 @@ outputs:
         - cd ko_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - ko_core_news_sm
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -1522,15 +1619,17 @@ outputs:
         - cd lt_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - lt_core_news_lg
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -1551,15 +1650,17 @@ outputs:
         - cd lt_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - lt_core_news_md
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -1580,15 +1681,17 @@ outputs:
         - cd lt_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - lt_core_news_sm
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -1611,15 +1714,17 @@ outputs:
         - cd mk_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - mk_core_news_lg
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -1640,15 +1745,17 @@ outputs:
         - cd mk_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - mk_core_news_md
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -1669,15 +1776,17 @@ outputs:
         - cd mk_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - mk_core_news_sm
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -1700,15 +1809,17 @@ outputs:
         - cd nb_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - nb_core_news_lg
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -1729,15 +1840,17 @@ outputs:
         - cd nb_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - nb_core_news_md
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -1758,15 +1871,17 @@ outputs:
         - cd nb_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - nb_core_news_sm
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -1789,15 +1904,17 @@ outputs:
         - cd nl_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - nl_core_news_lg
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -1818,15 +1935,17 @@ outputs:
         - cd nl_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - nl_core_news_md
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -1847,15 +1966,17 @@ outputs:
         - cd nl_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - nl_core_news_sm
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -1878,15 +1999,17 @@ outputs:
         - cd pl_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - pl_core_news_lg
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -1907,15 +2030,17 @@ outputs:
         - cd pl_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - pl_core_news_md
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -1936,15 +2061,17 @@ outputs:
         - cd pl_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - pl_core_news_sm
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -1967,15 +2094,17 @@ outputs:
         - cd pt_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - pt_core_news_lg
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -1996,15 +2125,17 @@ outputs:
         - cd pt_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - pt_core_news_md
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -2025,15 +2156,17 @@ outputs:
         - cd pt_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - pt_core_news_sm
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -2056,15 +2189,17 @@ outputs:
         - cd ro_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - ro_core_news_lg
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -2085,15 +2220,17 @@ outputs:
         - cd ro_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - ro_core_news_md
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -2114,15 +2251,17 @@ outputs:
         - cd ro_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - ro_core_news_sm
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -2137,6 +2276,135 @@ outputs:
         - ro_core_news_sm/LICENSES_SOURCES
 {% endif %}  # ro
 
+{% if spacy_lang == "sl" %}
+  - name: spacy-model-sl_core_news_lg
+    build:
+      noarch: python
+      script:
+        - cd sl_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
+    requirements:
+      host:
+        - python {{ python_min }}.*
+        - pip
+        - setuptools
+      run:
+        - python >={{ python_min }}
+        - spacy {{ spacy }}
+    test:
+      imports:
+        - sl_core_news_lg
+      requires:
+        - python ={{ python_min }}
+        - pip
+      commands:
+        - pip check
+        - python -c "__import__('sl_core_news_lg').load()"
+        - python -c "__import__('spacy').load('sl_core_news_lg')"
+    about:
+      summary: Slovenian pipeline optimized for CPU.
+      description: |-
+        Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), attribute_ruler, senter, ner.
+      license_file:
+        - sl_core_news_lg/LICENSE
+        - sl_core_news_lg/LICENSES_SOURCES
+
+  - name: spacy-model-sl_core_news_md
+    build:
+      noarch: python
+      script:
+        - cd sl_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
+    requirements:
+      host:
+        - python {{ python_min }}.*
+        - pip
+        - setuptools
+      run:
+        - python >={{ python_min }}
+        - spacy {{ spacy }}
+    test:
+      imports:
+        - sl_core_news_md
+      requires:
+        - python ={{ python_min }}
+        - pip
+      commands:
+        - pip check
+        - python -c "__import__('sl_core_news_md').load()"
+        - python -c "__import__('spacy').load('sl_core_news_md')"
+    about:
+      summary: Slovenian pipeline optimized for CPU.
+      description: |-
+        Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), attribute_ruler, senter, ner.
+      license_file:
+        - sl_core_news_md/LICENSE
+        - sl_core_news_md/LICENSES_SOURCES
+
+  - name: spacy-model-sl_core_news_sm
+    build:
+      noarch: python
+      script:
+        - cd sl_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
+    requirements:
+      host:
+        - python {{ python_min }}.*
+        - pip
+        - setuptools
+      run:
+        - python >={{ python_min }}
+        - spacy {{ spacy }}
+    test:
+      imports:
+        - sl_core_news_sm
+      requires:
+        - python ={{ python_min }}
+        - pip
+      commands:
+        - pip check
+        - python -c "__import__('sl_core_news_sm').load()"
+        - python -c "__import__('spacy').load('sl_core_news_sm')"
+    about:
+      summary: Slovenian pipeline optimized for CPU.
+      description: |-
+        Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), attribute_ruler, senter, ner.
+      license_file:
+        - sl_core_news_sm/LICENSE
+        - sl_core_news_sm/LICENSES_SOURCES
+
+  - name: spacy-model-sl_core_news_trf
+    build:
+      noarch: python
+      script:
+        - cd sl_core_news_trf && {{ PYTHON }} -m pip install . -vv --no-deps
+    requirements:
+      host:
+        - python {{ python_min }}.*
+        - pip
+        - setuptools
+      run:
+        - python >={{ python_min }}
+        - spacy {{ spacy }}
+        - protobuf<3.21.0
+        - sentencepiece >=0.1.91,!=0.1.92
+        - spacy-curated-transformers >=0.2.2,<1.0.0
+    test:
+      imports:
+        - sl_core_news_trf
+      requires:
+        - python ={{ python_min }}
+        - pip
+      commands:
+        - pip check
+        - python -c "__import__('sl_core_news_trf').load()"
+        - python -c "__import__('spacy').load('sl_core_news_trf')"
+    about:
+      summary: Slovenian transformer pipeline (Transformer(name='EMBEDDIA/sloberta', piece_encoder='camembert-sentencepiece', stride=128, type='camembert', width=768, window=168, vocab_size=32005)).
+      description: |-
+        Components: transformer, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), ner.
+      license_file:
+        - sl_core_news_trf/LICENSE
+        - sl_core_news_trf/LICENSES_SOURCES
+{% endif %}  # sl
+
 {% if spacy_lang == "sv" %}
   - name: spacy-model-sv_core_news_lg
     build:
@@ -2145,15 +2413,17 @@ outputs:
         - cd sv_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - sv_core_news_lg
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -2174,15 +2444,17 @@ outputs:
         - cd sv_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - sv_core_news_md
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -2203,15 +2475,17 @@ outputs:
         - cd sv_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - sv_core_news_sm
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -2234,15 +2508,17 @@ outputs:
         - cd xx_ent_wiki_sm && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - xx_ent_wiki_sm
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -2263,15 +2539,17 @@ outputs:
         - cd xx_sent_ud_sm && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
     test:
       imports:
         - xx_sent_ud_sm
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -2294,16 +2572,18 @@ outputs:
         - cd zh_core_web_lg && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
-        - spacy-pkuseg >=0.0.27,<0.1.0
+        - spacy-pkuseg >=1.0.0,<2.0.0
     test:
       imports:
         - zh_core_web_lg
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -2324,16 +2604,18 @@ outputs:
         - cd zh_core_web_md && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
-        - spacy-pkuseg >=0.0.27,<0.1.0
+        - spacy-pkuseg >=1.0.0,<2.0.0
     test:
       imports:
         - zh_core_web_md
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -2354,16 +2636,18 @@ outputs:
         - cd zh_core_web_sm && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
-        - spacy-pkuseg >=0.0.27,<0.1.0
+        - spacy-pkuseg >=1.0.0,<2.0.0
     test:
       imports:
         - zh_core_web_sm
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
@@ -2384,24 +2668,26 @@ outputs:
         - cd zh_core_web_trf && {{ PYTHON }} -m pip install . -vv --no-deps
     requirements:
       host:
-        - python >=3.6
+        - python {{ python_min }}.*
         - pip
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}
-        - spacy-pkuseg >=0.0.27,<0.1.0
-        - spacy-transformers >=1.2.0.dev0,<1.3.0
+        - spacy-curated-transformers >=0.2.2,<1.0.0
+        - spacy-pkuseg >=1.0.0,<2.0.0
     test:
       imports:
         - zh_core_web_trf
       requires:
+        - python ={{ python_min }}
         - pip
       commands:
         - pip check
         - python -c "__import__('zh_core_web_trf').load()"
         - python -c "__import__('spacy').load('zh_core_web_trf')"
     about:
-      summary: Chinese transformer pipeline (bert-base-chinese).
+      summary: Chinese transformer pipeline (Transformer(name='bert-base-chinese', piece_encoder='bert-wordpiece', stride=152, type='bert', width=768, window=208, vocab_size=21128)).
       description: |-
         Components: transformer, tagger, parser, ner, attribute_ruler.
       license_file:
