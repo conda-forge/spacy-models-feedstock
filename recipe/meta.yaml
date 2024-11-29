@@ -1303,7 +1303,7 @@ outputs:
       run:
         - python >={{ python_min }}
         - spacy {{ spacy }}
-        - protobuf<3.21.0
+        - protobuf
         - sentencepiece >=0.1.91,!=0.1.92
         - spacy-curated-transformers >=0.2.2,<1.0.0
         - tokenizers  >=0.11.1,!=0.11.3,<0.13
@@ -2383,7 +2383,7 @@ outputs:
       run:
         - python >={{ python_min }}
         - spacy {{ spacy }}
-        - protobuf<3.21.0
+        - protobuf
         - sentencepiece >=0.1.91,!=0.1.92
         - spacy-curated-transformers >=0.2.2,<1.0.0
     test:
