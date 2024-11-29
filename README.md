@@ -17,82 +17,38 @@ Development: https://github.com/explosion/spacy-models
 
 Documentation: https://spacy.io/models
 
-About spacy-model-sl_core_news_lg
+About spacy-model-el_core_news_lg
 ---------------------------------
 
 
 
 Package license: 
 
-Summary: Slovenian pipeline optimized for CPU.
+Summary: Greek pipeline optimized for CPU.
 
-Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), attribute_ruler, senter, ner.
+Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
 
-About spacy-model-sl_core_news_md
+About spacy-model-el_core_news_md
 ---------------------------------
 
 
 
 Package license: 
 
-Summary: Slovenian pipeline optimized for CPU.
+Summary: Greek pipeline optimized for CPU.
 
-Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), attribute_ruler, senter, ner.
+Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
 
-About spacy-model-sl_core_news_sm
+About spacy-model-el_core_news_sm
 ---------------------------------
 
 
 
 Package license: 
 
-Summary: Slovenian pipeline optimized for CPU.
+Summary: Greek pipeline optimized for CPU.
 
-Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), attribute_ruler, senter, ner.
-
-About spacy-model-sl_core_news_trf
-----------------------------------
-
-
-
-Package license: 
-
-Summary: Slovenian transformer pipeline (Transformer(name='EMBEDDIA/sloberta', piece_encoder='camembert-sentencepiece', stride=128, type='camembert', width=768, window=168, vocab_size=32005)).
-
-Components: transformer, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), ner.
-
-About spacy-model-mk_core_news_lg
----------------------------------
-
-
-
-Package license: 
-
-Summary: Macedonian pipeline optimized for CPU.
-
-Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler, lemmatizer.
-
-About spacy-model-mk_core_news_md
----------------------------------
-
-
-
-Package license: 
-
-Summary: Macedonian pipeline optimized for CPU.
-
-Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler, lemmatizer.
-
-About spacy-model-mk_core_news_sm
----------------------------------
-
-
-
-Package license: 
-
-Summary: Macedonian pipeline optimized for CPU.
-
-Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler, lemmatizer.
+Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
 
 About spacy-model-sv_core_news_lg
 ---------------------------------
@@ -160,71 +116,71 @@ Summary: Portuguese pipeline optimized for CPU.
 
 Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
 
-About spacy-model-pl_core_news_lg
+About spacy-model-nb_core_news_lg
 ---------------------------------
 
 
 
 Package license: 
 
-Summary: Polish pipeline optimized for CPU.
+Summary: Norwegian (Bokmål) pipeline optimized for CPU.
 
-Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), tagger, senter, ner.
+Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
 
-About spacy-model-pl_core_news_md
+About spacy-model-nb_core_news_md
 ---------------------------------
 
 
 
 Package license: 
 
-Summary: Polish pipeline optimized for CPU.
+Summary: Norwegian (Bokmål) pipeline optimized for CPU.
 
-Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), tagger, senter, ner.
+Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
 
-About spacy-model-pl_core_news_sm
+About spacy-model-nb_core_news_sm
 ---------------------------------
 
 
 
 Package license: 
 
-Summary: Polish pipeline optimized for CPU.
+Summary: Norwegian (Bokmål) pipeline optimized for CPU.
 
-Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), tagger, senter, ner.
+Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
 
-About spacy-model-fi_core_news_lg
+About spacy-model-lt_core_news_lg
 ---------------------------------
 
 
 
 Package license: 
 
-Summary: Finnish pipeline optimized for CPU.
+Summary: Lithuanian pipeline optimized for CPU.
 
-Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+Components: tok2vec, morphologizer, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner.
 
-About spacy-model-fi_core_news_md
+About spacy-model-lt_core_news_md
 ---------------------------------
 
 
 
 Package license: 
 
-Summary: Finnish pipeline optimized for CPU.
+Summary: Lithuanian pipeline optimized for CPU.
 
-Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+Components: tok2vec, morphologizer, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner.
 
-About spacy-model-fi_core_news_sm
+About spacy-model-lt_core_news_sm
 ---------------------------------
 
 
 
 Package license: 
 
-Summary: Finnish pipeline optimized for CPU.
+Summary: Lithuanian pipeline optimized for CPU.
 
-Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+Components: tok2vec, morphologizer, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner.
 
 About spacy-model-ca_core_news_lg
 ---------------------------------
@@ -270,38 +226,71 @@ Summary: Catalan transformer pipeline (Transformer(name='projecte-aina/roberta-b
 
 Components: transformer, morphologizer, parser, ner, attribute_ruler, lemmatizer.
 
-About spacy-model-lt_core_news_lg
+About spacy-model-ko_core_news_lg
 ---------------------------------
 
 
 
 Package license: 
 
-Summary: Lithuanian pipeline optimized for CPU.
+Summary: Korean pipeline optimized for CPU.
 
-Components: tok2vec, morphologizer, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
 
-About spacy-model-lt_core_news_md
+About spacy-model-ko_core_news_md
 ---------------------------------
 
 
 
 Package license: 
 
-Summary: Lithuanian pipeline optimized for CPU.
+Summary: Korean pipeline optimized for CPU.
 
-Components: tok2vec, morphologizer, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
 
-About spacy-model-lt_core_news_sm
+About spacy-model-ko_core_news_sm
 ---------------------------------
 
 
 
 Package license: 
 
-Summary: Lithuanian pipeline optimized for CPU.
+Summary: Korean pipeline optimized for CPU.
 
-Components: tok2vec, morphologizer, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+
+About spacy-model-pl_core_news_lg
+---------------------------------
+
+
+
+Package license: 
+
+Summary: Polish pipeline optimized for CPU.
+
+Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), tagger, senter, ner.
+
+About spacy-model-pl_core_news_md
+---------------------------------
+
+
+
+Package license: 
+
+Summary: Polish pipeline optimized for CPU.
+
+Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), tagger, senter, ner.
+
+About spacy-model-pl_core_news_sm
+---------------------------------
+
+
+
+Package license: 
+
+Summary: Polish pipeline optimized for CPU.
+
+Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), tagger, senter, ner.
 
 About spacy-model-es_core_news_lg
 ---------------------------------
@@ -347,82 +336,49 @@ Summary: Spanish transformer pipeline (Transformer(name='dccuchile/bert-base-spa
 
 Components: transformer, morphologizer, parser, attribute_ruler, lemmatizer.
 
-About spacy-model-hr_core_news_lg
+About spacy-model-sl_core_news_lg
 ---------------------------------
 
 
 
 Package license: 
 
-Summary: Croatian pipeline optimized for CPU.
+Summary: Slovenian pipeline optimized for CPU.
 
-Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), attribute_ruler, senter, ner.
 
-About spacy-model-hr_core_news_md
+About spacy-model-sl_core_news_md
 ---------------------------------
 
 
 
 Package license: 
 
-Summary: Croatian pipeline optimized for CPU.
+Summary: Slovenian pipeline optimized for CPU.
 
-Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), attribute_ruler, senter, ner.
 
-About spacy-model-hr_core_news_sm
+About spacy-model-sl_core_news_sm
 ---------------------------------
 
 
 
 Package license: 
 
-Summary: Croatian pipeline optimized for CPU.
+Summary: Slovenian pipeline optimized for CPU.
 
-Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), attribute_ruler, senter, ner.
 
-About spacy-model-de_core_news_lg
----------------------------------
-
-
-
-Package license: 
-
-Summary: German pipeline optimized for CPU.
-
-Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
-
-About spacy-model-de_core_news_md
----------------------------------
+About spacy-model-sl_core_news_trf
+----------------------------------
 
 
 
 Package license: 
 
-Summary: German pipeline optimized for CPU.
+Summary: Slovenian transformer pipeline (Transformer(name='EMBEDDIA/sloberta', piece_encoder='camembert-sentencepiece', stride=128, type='camembert', width=768, window=168, vocab_size=32005)).
 
-Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
-
-About spacy-model-de_core_news_sm
----------------------------------
-
-
-
-Package license: 
-
-Summary: German pipeline optimized for CPU.
-
-Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
-
-About spacy-model-de_dep_news_trf
----------------------------------
-
-
-
-Package license: 
-
-Summary: German transformer pipeline (Transformer(name='bert-base-german-cased', piece_encoder='bert-wordpiece', stride=136, type='bert', width=768, window=176, vocab_size=30000)).
-
-Components: transformer, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer).
+Components: transformer, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), ner.
 
 About spacy-model-nl_core_news_lg
 ---------------------------------
@@ -457,49 +413,38 @@ Summary: Dutch pipeline optimized for CPU.
 
 Components: tok2vec, morphologizer, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner.
 
-About spacy-model-en_core_web_lg
---------------------------------
-
-
-
-Package license: 
-
-Summary: English pipeline optimized for CPU.
-
-Components: tok2vec, tagger, parser, senter, ner, attribute_ruler, lemmatizer.
-
-About spacy-model-en_core_web_md
---------------------------------
-
-
-
-Package license: 
-
-Summary: English pipeline optimized for CPU.
-
-Components: tok2vec, tagger, parser, senter, ner, attribute_ruler, lemmatizer.
-
-About spacy-model-en_core_web_sm
---------------------------------
-
-
-
-Package license: 
-
-Summary: English pipeline optimized for CPU.
-
-Components: tok2vec, tagger, parser, senter, ner, attribute_ruler, lemmatizer.
-
-About spacy-model-en_core_web_trf
+About spacy-model-ro_core_news_lg
 ---------------------------------
 
 
 
 Package license: 
 
-Summary: English transformer pipeline (Transformer(name='roberta-base', piece_encoder='byte-bpe', stride=104, type='roberta', width=768, window=144, vocab_size=50265)).
+Summary: Romanian pipeline optimized for CPU.
 
-Components: transformer, tagger, parser, ner, attribute_ruler, lemmatizer.
+Components: tok2vec, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
+
+About spacy-model-ro_core_news_md
+---------------------------------
+
+
+
+Package license: 
+
+Summary: Romanian pipeline optimized for CPU.
+
+Components: tok2vec, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
+
+About spacy-model-ro_core_news_sm
+---------------------------------
+
+
+
+Package license: 
+
+Summary: Romanian pipeline optimized for CPU.
+
+Components: tok2vec, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
 
 About spacy-model-zh_core_web_lg
 --------------------------------
@@ -578,38 +523,181 @@ Summary: Italian pipeline optimized for CPU.
 
 Components: tok2vec, morphologizer, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner.
 
-About spacy-model-ro_core_news_lg
+About spacy-model-de_core_news_lg
 ---------------------------------
 
 
 
 Package license: 
 
-Summary: Romanian pipeline optimized for CPU.
+Summary: German pipeline optimized for CPU.
 
-Components: tok2vec, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
+Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
 
-About spacy-model-ro_core_news_md
+About spacy-model-de_core_news_md
 ---------------------------------
 
 
 
 Package license: 
 
-Summary: Romanian pipeline optimized for CPU.
+Summary: German pipeline optimized for CPU.
 
-Components: tok2vec, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
+Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
 
-About spacy-model-ro_core_news_sm
+About spacy-model-de_core_news_sm
 ---------------------------------
 
 
 
 Package license: 
 
-Summary: Romanian pipeline optimized for CPU.
+Summary: German pipeline optimized for CPU.
 
-Components: tok2vec, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
+Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+
+About spacy-model-de_dep_news_trf
+---------------------------------
+
+
+
+Package license: 
+
+Summary: German transformer pipeline (Transformer(name='bert-base-german-cased', piece_encoder='bert-wordpiece', stride=136, type='bert', width=768, window=176, vocab_size=30000)).
+
+Components: transformer, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer).
+
+About spacy-model-en_core_web_lg
+--------------------------------
+
+
+
+Package license: 
+
+Summary: English pipeline optimized for CPU.
+
+Components: tok2vec, tagger, parser, senter, ner, attribute_ruler, lemmatizer.
+
+About spacy-model-en_core_web_md
+--------------------------------
+
+
+
+Package license: 
+
+Summary: English pipeline optimized for CPU.
+
+Components: tok2vec, tagger, parser, senter, ner, attribute_ruler, lemmatizer.
+
+About spacy-model-en_core_web_sm
+--------------------------------
+
+
+
+Package license: 
+
+Summary: English pipeline optimized for CPU.
+
+Components: tok2vec, tagger, parser, senter, ner, attribute_ruler, lemmatizer.
+
+About spacy-model-en_core_web_trf
+---------------------------------
+
+
+
+Package license: 
+
+Summary: English transformer pipeline (Transformer(name='roberta-base', piece_encoder='byte-bpe', stride=104, type='roberta', width=768, window=144, vocab_size=50265)).
+
+Components: transformer, tagger, parser, ner, attribute_ruler, lemmatizer.
+
+About spacy-model-mk_core_news_lg
+---------------------------------
+
+
+
+Package license: 
+
+Summary: Macedonian pipeline optimized for CPU.
+
+Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler, lemmatizer.
+
+About spacy-model-mk_core_news_md
+---------------------------------
+
+
+
+Package license: 
+
+Summary: Macedonian pipeline optimized for CPU.
+
+Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler, lemmatizer.
+
+About spacy-model-mk_core_news_sm
+---------------------------------
+
+
+
+Package license: 
+
+Summary: Macedonian pipeline optimized for CPU.
+
+Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler, lemmatizer.
+
+About spacy-model-xx_ent_wiki_sm
+--------------------------------
+
+
+
+Package license: 
+
+Summary: Multi-language pipeline optimized for CPU.
+
+Components: ner.
+
+About spacy-model-xx_sent_ud_sm
+-------------------------------
+
+
+
+Package license: 
+
+Summary: Multi-language pipeline optimized for CPU.
+
+Components: senter.
+
+About spacy-model-fi_core_news_lg
+---------------------------------
+
+
+
+Package license: 
+
+Summary: Finnish pipeline optimized for CPU.
+
+Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+
+About spacy-model-fi_core_news_md
+---------------------------------
+
+
+
+Package license: 
+
+Summary: Finnish pipeline optimized for CPU.
+
+Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+
+About spacy-model-fi_core_news_sm
+---------------------------------
+
+
+
+Package license: 
+
+Summary: Finnish pipeline optimized for CPU.
+
+Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
 
 About spacy-model-fr_core_news_lg
 ---------------------------------
@@ -655,124 +743,36 @@ Summary: French transformer pipeline (Transformer(name='camembert-base', piece_e
 
 Components: transformer, morphologizer, parser, attribute_ruler, lemmatizer.
 
-About spacy-model-nb_core_news_lg
+About spacy-model-hr_core_news_lg
 ---------------------------------
 
 
 
 Package license: 
 
-Summary: Norwegian (Bokmål) pipeline optimized for CPU.
-
-Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
-
-About spacy-model-nb_core_news_md
----------------------------------
-
-
-
-Package license: 
-
-Summary: Norwegian (Bokmål) pipeline optimized for CPU.
-
-Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
-
-About spacy-model-nb_core_news_sm
----------------------------------
-
-
-
-Package license: 
-
-Summary: Norwegian (Bokmål) pipeline optimized for CPU.
-
-Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
-
-About spacy-model-xx_ent_wiki_sm
---------------------------------
-
-
-
-Package license: 
-
-Summary: Multi-language pipeline optimized for CPU.
-
-Components: ner.
-
-About spacy-model-xx_sent_ud_sm
--------------------------------
-
-
-
-Package license: 
-
-Summary: Multi-language pipeline optimized for CPU.
-
-Components: senter.
-
-About spacy-model-el_core_news_lg
----------------------------------
-
-
-
-Package license: 
-
-Summary: Greek pipeline optimized for CPU.
-
-Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
-
-About spacy-model-el_core_news_md
----------------------------------
-
-
-
-Package license: 
-
-Summary: Greek pipeline optimized for CPU.
-
-Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
-
-About spacy-model-el_core_news_sm
----------------------------------
-
-
-
-Package license: 
-
-Summary: Greek pipeline optimized for CPU.
-
-Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
-
-About spacy-model-ko_core_news_lg
----------------------------------
-
-
-
-Package license: 
-
-Summary: Korean pipeline optimized for CPU.
+Summary: Croatian pipeline optimized for CPU.
 
 Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
 
-About spacy-model-ko_core_news_md
+About spacy-model-hr_core_news_md
 ---------------------------------
 
 
 
 Package license: 
 
-Summary: Korean pipeline optimized for CPU.
+Summary: Croatian pipeline optimized for CPU.
 
 Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
 
-About spacy-model-ko_core_news_sm
+About spacy-model-hr_core_news_sm
 ---------------------------------
 
 
 
 Package license: 
 
-Summary: Korean pipeline optimized for CPU.
+Summary: Croatian pipeline optimized for CPU.
 
 Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
 
@@ -826,7 +826,7 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=None&branchName=main">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16126&branchName=main">
         <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/spacy-models-feedstock?branchName=main">
       </a>
     </td>
