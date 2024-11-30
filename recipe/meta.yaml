@@ -150,8 +150,6 @@ source:
   - url: https://github.com/explosion/spacy-models/releases/download/fr_dep_news_trf-{{ version }}/fr_dep_news_trf-{{ version }}.tar.gz
     sha256: 73816ee6730efe5ff2b3cca136fde69e09a69cfaa51d8b7905d7c5a75c1cedbc
     folder: fr_dep_news_trf
-    patches:
-      - patches/protobuf.diff
 {% endif %}  # fr
 
 {% if spacy_lang == "hr" %}
@@ -181,6 +179,24 @@ source:
     sha256: 29b4c653f8ace0db9dba4393a890f097b4d1108a522cf56e4b00b303b391f94b
     folder: it_core_news_sm
 {% endif %}  # it
+
+{% if spacy_lang == "ja" %}
+  - url: https://github.com/explosion/spacy-models/releases/download/ja_core_news_lg-{{ version }}/ja_core_news_lg-{{ version }}.tar.gz
+    sha256: c3da79e345459762b64ca5147bf0a329924702fb17f29b4bae822af3f621e22d
+    folder: ja_core_news_lg
+
+  - url: https://github.com/explosion/spacy-models/releases/download/ja_core_news_md-{{ version }}/ja_core_news_md-{{ version }}.tar.gz
+    sha256: a99089e534059923cfbe2e929e19bd66af0cc7815e7631cad846830e38a23ef6
+    folder: ja_core_news_md
+
+  - url: https://github.com/explosion/spacy-models/releases/download/ja_core_news_sm-{{ version }}/ja_core_news_sm-{{ version }}.tar.gz
+    sha256: 856f0e15da5d2151626222b10d3b224d315079ae121e8ed940a3d1bfc3a4a314
+    folder: ja_core_news_sm
+
+  - url: https://github.com/explosion/spacy-models/releases/download/ja_core_news_trf-{{ version }}/ja_core_news_trf-{{ version }}.tar.gz
+    sha256: 13a188ce31db6b3187a12041e431244bc7a52e405125fa511522042a1d8191fe
+    folder: ja_core_news_trf
+{% endif %}  # ja
 
 {% if spacy_lang == "ko" %}
   - url: https://github.com/explosion/spacy-models/releases/download/ko_core_news_lg-{{ version }}/ko_core_news_lg-{{ version }}.tar.gz
@@ -310,8 +326,6 @@ source:
   - url: https://github.com/explosion/spacy-models/releases/download/sl_core_news_trf-{{ version }}/sl_core_news_trf-{{ version }}.tar.gz
     sha256: f56260e7ef78f9bdda3bbf8728323bc220441a7bb1d787fffcaaabaeaf85b1c5
     folder: sl_core_news_trf
-    patches:
-      - patches/protobuf.diff
 {% endif %}  # sl
 
 {% if spacy_lang == "sv" %}
@@ -363,7 +377,7 @@ build:
 
 requirements:
   host:
-    - python {{ python_min }}.*
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
@@ -380,11 +394,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd ca_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd ca_core_news_lg
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -393,7 +408,7 @@ outputs:
       imports:
         - ca_core_news_lg
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -411,11 +426,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd ca_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd ca_core_news_md
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -424,7 +440,7 @@ outputs:
       imports:
         - ca_core_news_md
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -442,11 +458,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd ca_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd ca_core_news_sm
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -455,7 +472,7 @@ outputs:
       imports:
         - ca_core_news_sm
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -473,11 +490,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd ca_core_news_trf && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd ca_core_news_trf
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -487,7 +505,7 @@ outputs:
       imports:
         - ca_core_news_trf
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -507,11 +525,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd da_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd da_core_news_lg
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -520,7 +539,7 @@ outputs:
       imports:
         - da_core_news_lg
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -538,11 +557,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd da_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd da_core_news_md
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -551,7 +571,7 @@ outputs:
       imports:
         - da_core_news_md
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -569,11 +589,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd da_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd da_core_news_sm
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -582,7 +603,7 @@ outputs:
       imports:
         - da_core_news_sm
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -600,11 +621,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd da_core_news_trf && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd da_core_news_trf
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -614,7 +636,7 @@ outputs:
       imports:
         - da_core_news_trf
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -634,11 +656,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd de_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd de_core_news_lg
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -647,7 +670,7 @@ outputs:
       imports:
         - de_core_news_lg
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -665,11 +688,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd de_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd de_core_news_md
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -678,7 +702,7 @@ outputs:
       imports:
         - de_core_news_md
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -696,11 +720,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd de_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd de_core_news_sm
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -709,7 +734,7 @@ outputs:
       imports:
         - de_core_news_sm
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -727,11 +752,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd de_dep_news_trf && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd de_dep_news_trf
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -741,7 +767,7 @@ outputs:
       imports:
         - de_dep_news_trf
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -761,11 +787,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd el_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd el_core_news_lg
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -774,7 +801,7 @@ outputs:
       imports:
         - el_core_news_lg
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -792,11 +819,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd el_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd el_core_news_md
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -805,7 +833,7 @@ outputs:
       imports:
         - el_core_news_md
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -823,11 +851,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd el_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd el_core_news_sm
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -836,7 +865,7 @@ outputs:
       imports:
         - el_core_news_sm
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -856,11 +885,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd en_core_web_lg && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd en_core_web_lg
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -869,7 +899,7 @@ outputs:
       imports:
         - en_core_web_lg
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -887,11 +917,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd en_core_web_md && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd en_core_web_md
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -900,7 +931,7 @@ outputs:
       imports:
         - en_core_web_md
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -918,11 +949,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd en_core_web_sm && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd en_core_web_sm
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -931,7 +963,7 @@ outputs:
       imports:
         - en_core_web_sm
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -949,11 +981,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd en_core_web_trf && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd en_core_web_trf
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -963,7 +996,7 @@ outputs:
       imports:
         - en_core_web_trf
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -983,11 +1016,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd es_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd es_core_news_lg
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -996,7 +1030,7 @@ outputs:
       imports:
         - es_core_news_lg
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -1014,11 +1048,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd es_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd es_core_news_md
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -1027,7 +1062,7 @@ outputs:
       imports:
         - es_core_news_md
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -1045,11 +1080,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd es_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd es_core_news_sm
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -1058,7 +1094,7 @@ outputs:
       imports:
         - es_core_news_sm
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -1076,11 +1112,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd es_dep_news_trf && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd es_dep_news_trf
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -1090,7 +1127,7 @@ outputs:
       imports:
         - es_dep_news_trf
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -1110,11 +1147,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd fi_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd fi_core_news_lg
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -1123,7 +1161,7 @@ outputs:
       imports:
         - fi_core_news_lg
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -1141,11 +1179,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd fi_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd fi_core_news_md
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -1154,7 +1193,7 @@ outputs:
       imports:
         - fi_core_news_md
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -1172,11 +1211,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd fi_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd fi_core_news_sm
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -1185,7 +1225,7 @@ outputs:
       imports:
         - fi_core_news_sm
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -1205,11 +1245,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd fr_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd fr_core_news_lg
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -1218,7 +1259,7 @@ outputs:
       imports:
         - fr_core_news_lg
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -1236,11 +1277,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd fr_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd fr_core_news_md
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -1249,7 +1291,7 @@ outputs:
       imports:
         - fr_core_news_md
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -1267,11 +1309,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd fr_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd fr_core_news_sm
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -1280,7 +1323,7 @@ outputs:
       imports:
         - fr_core_news_sm
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -1298,11 +1341,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd fr_dep_news_trf && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd fr_dep_news_trf
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -1315,7 +1359,7 @@ outputs:
       imports:
         - fr_dep_news_trf
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -1335,11 +1379,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd hr_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd hr_core_news_lg
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -1348,7 +1393,7 @@ outputs:
       imports:
         - hr_core_news_lg
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -1366,11 +1411,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd hr_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd hr_core_news_md
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -1379,7 +1425,7 @@ outputs:
       imports:
         - hr_core_news_md
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -1397,11 +1443,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd hr_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd hr_core_news_sm
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -1410,7 +1457,7 @@ outputs:
       imports:
         - hr_core_news_sm
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -1430,11 +1477,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd it_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd it_core_news_lg
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -1443,7 +1491,7 @@ outputs:
       imports:
         - it_core_news_lg
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -1461,11 +1509,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd it_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd it_core_news_md
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -1474,7 +1523,7 @@ outputs:
       imports:
         - it_core_news_md
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -1492,11 +1541,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd it_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd it_core_news_sm
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -1505,7 +1555,7 @@ outputs:
       imports:
         - it_core_news_sm
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -1520,16 +1570,156 @@ outputs:
         - it_core_news_sm/LICENSES_SOURCES
 {% endif %}  # it
 
+{% if spacy_lang == "ja" %}
+  - name: spacy-model-ja_core_news_lg
+    build:
+      noarch: python
+      script:
+        - cd ja_core_news_lg
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+    requirements:
+      host:
+        - pip
+        - python {{ python_min }}
+        - setuptools
+      run:
+        - python >={{ python_min }}
+        - spacy {{ spacy }}
+        - sudachidict-core >=20211220
+        - sudachipy >=0.5.2,!=0.6.1
+    test:
+      imports:
+        - ja_core_news_lg
+      requires:
+        - python {{ python_min }}
+        - pip
+      commands:
+        - pip check
+        - python -c "__import__('ja_core_news_lg').load()"
+        - python -c "__import__('spacy').load('ja_core_news_lg')"
+    about:
+      summary: Japanese pipeline optimized for CPU.
+      description: |-
+        Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler.
+      license_file:
+        - ja_core_news_lg/LICENSE
+        - ja_core_news_lg/LICENSES_SOURCES
+
+  - name: spacy-model-ja_core_news_md
+    build:
+      noarch: python
+      script:
+        - cd ja_core_news_md
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+    requirements:
+      host:
+        - pip
+        - python {{ python_min }}
+        - setuptools
+      run:
+        - python >={{ python_min }}
+        - spacy {{ spacy }}
+        - sudachidict-core >=20211220
+        - sudachipy >=0.5.2,!=0.6.1
+    test:
+      imports:
+        - ja_core_news_md
+      requires:
+        - python {{ python_min }}
+        - pip
+      commands:
+        - pip check
+        - python -c "__import__('ja_core_news_md').load()"
+        - python -c "__import__('spacy').load('ja_core_news_md')"
+    about:
+      summary: Japanese pipeline optimized for CPU.
+      description: |-
+        Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler.
+      license_file:
+        - ja_core_news_md/LICENSE
+        - ja_core_news_md/LICENSES_SOURCES
+
+  - name: spacy-model-ja_core_news_sm
+    build:
+      noarch: python
+      script:
+        - cd ja_core_news_sm
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+    requirements:
+      host:
+        - pip
+        - python {{ python_min }}
+        - setuptools
+      run:
+        - python >={{ python_min }}
+        - spacy {{ spacy }}
+        - sudachidict-core >=20211220
+        - sudachipy >=0.5.2,!=0.6.1
+    test:
+      imports:
+        - ja_core_news_sm
+      requires:
+        - python {{ python_min }}
+        - pip
+      commands:
+        - pip check
+        - python -c "__import__('ja_core_news_sm').load()"
+        - python -c "__import__('spacy').load('ja_core_news_sm')"
+    about:
+      summary: Japanese pipeline optimized for CPU.
+      description: |-
+        Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler.
+      license_file:
+        - ja_core_news_sm/LICENSE
+        - ja_core_news_sm/LICENSES_SOURCES
+
+  - name: spacy-model-ja_core_news_trf
+    build:
+      noarch: python
+      script:
+        - cd ja_core_news_trf
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+    requirements:
+      host:
+        - pip
+        - python {{ python_min }}
+        - setuptools
+      run:
+        - python >={{ python_min }}
+        - spacy {{ spacy }}
+        - spacy-curated-transformers >=0.2.2,<1.0.0
+        - sudachidict-core >=20211220
+        - sudachipy >=0.5.2,!=0.6.1
+    test:
+      imports:
+        - ja_core_news_trf
+      requires:
+        - python {{ python_min }}
+        - pip
+      commands:
+        - pip check
+        - python -c "__import__('ja_core_news_trf').load()"
+        - python -c "__import__('spacy').load('ja_core_news_trf')"
+    about:
+      summary: Japanese transformer pipeline (Transformer(name='cl-tohoku/bert-base-japanese-char-v2', piece_encoder='char', stride=160, type='bert', width=768, window=216, vocab_size=6144)).
+      description: |-
+        Components: transformer, morphologizer, parser, ner.
+      license_file:
+        - ja_core_news_trf/LICENSE
+        - ja_core_news_trf/LICENSES_SOURCES
+{% endif %}  # ja
+
 {% if spacy_lang == "ko" %}
   - name: spacy-model-ko_core_news_lg
     build:
       noarch: python
       script:
-        - cd ko_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd ko_core_news_lg
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -1538,7 +1728,7 @@ outputs:
       imports:
         - ko_core_news_lg
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -1556,11 +1746,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd ko_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd ko_core_news_md
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -1569,7 +1760,7 @@ outputs:
       imports:
         - ko_core_news_md
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -1587,11 +1778,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd ko_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd ko_core_news_sm
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -1600,7 +1792,7 @@ outputs:
       imports:
         - ko_core_news_sm
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -1620,11 +1812,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd lt_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd lt_core_news_lg
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -1633,7 +1826,7 @@ outputs:
       imports:
         - lt_core_news_lg
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -1651,11 +1844,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd lt_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd lt_core_news_md
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -1664,7 +1858,7 @@ outputs:
       imports:
         - lt_core_news_md
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -1682,11 +1876,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd lt_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd lt_core_news_sm
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -1695,7 +1890,7 @@ outputs:
       imports:
         - lt_core_news_sm
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -1715,11 +1910,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd mk_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd mk_core_news_lg
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -1728,7 +1924,7 @@ outputs:
       imports:
         - mk_core_news_lg
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -1746,11 +1942,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd mk_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd mk_core_news_md
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -1759,7 +1956,7 @@ outputs:
       imports:
         - mk_core_news_md
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -1777,11 +1974,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd mk_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd mk_core_news_sm
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -1790,7 +1988,7 @@ outputs:
       imports:
         - mk_core_news_sm
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -1810,11 +2008,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd nb_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd nb_core_news_lg
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -1823,7 +2022,7 @@ outputs:
       imports:
         - nb_core_news_lg
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -1841,11 +2040,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd nb_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd nb_core_news_md
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -1854,7 +2054,7 @@ outputs:
       imports:
         - nb_core_news_md
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -1872,11 +2072,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd nb_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd nb_core_news_sm
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -1885,7 +2086,7 @@ outputs:
       imports:
         - nb_core_news_sm
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -1905,11 +2106,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd nl_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd nl_core_news_lg
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -1918,7 +2120,7 @@ outputs:
       imports:
         - nl_core_news_lg
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -1936,11 +2138,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd nl_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd nl_core_news_md
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -1949,7 +2152,7 @@ outputs:
       imports:
         - nl_core_news_md
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -1967,11 +2170,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd nl_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd nl_core_news_sm
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -1980,7 +2184,7 @@ outputs:
       imports:
         - nl_core_news_sm
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -2000,11 +2204,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd pl_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd pl_core_news_lg
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -2013,7 +2218,7 @@ outputs:
       imports:
         - pl_core_news_lg
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -2031,11 +2236,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd pl_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd pl_core_news_md
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -2044,7 +2250,7 @@ outputs:
       imports:
         - pl_core_news_md
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -2062,11 +2268,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd pl_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd pl_core_news_sm
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -2075,7 +2282,7 @@ outputs:
       imports:
         - pl_core_news_sm
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -2095,11 +2302,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd pt_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd pt_core_news_lg
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -2108,7 +2316,7 @@ outputs:
       imports:
         - pt_core_news_lg
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -2126,11 +2334,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd pt_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd pt_core_news_md
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -2139,7 +2348,7 @@ outputs:
       imports:
         - pt_core_news_md
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -2157,11 +2366,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd pt_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd pt_core_news_sm
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -2170,7 +2380,7 @@ outputs:
       imports:
         - pt_core_news_sm
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -2190,11 +2400,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd ro_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd ro_core_news_lg
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -2203,7 +2414,7 @@ outputs:
       imports:
         - ro_core_news_lg
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -2221,11 +2432,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd ro_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd ro_core_news_md
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -2234,7 +2446,7 @@ outputs:
       imports:
         - ro_core_news_md
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -2252,11 +2464,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd ro_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd ro_core_news_sm
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -2265,7 +2478,7 @@ outputs:
       imports:
         - ro_core_news_sm
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -2285,11 +2498,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd sl_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd sl_core_news_lg
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -2298,7 +2512,7 @@ outputs:
       imports:
         - sl_core_news_lg
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -2316,11 +2530,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd sl_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd sl_core_news_md
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -2329,7 +2544,7 @@ outputs:
       imports:
         - sl_core_news_md
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -2347,11 +2562,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd sl_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd sl_core_news_sm
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -2360,7 +2576,7 @@ outputs:
       imports:
         - sl_core_news_sm
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -2378,11 +2594,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd sl_core_news_trf && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd sl_core_news_trf
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -2394,7 +2611,7 @@ outputs:
       imports:
         - sl_core_news_trf
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -2414,11 +2631,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd sv_core_news_lg && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd sv_core_news_lg
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -2427,7 +2645,7 @@ outputs:
       imports:
         - sv_core_news_lg
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -2445,11 +2663,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd sv_core_news_md && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd sv_core_news_md
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -2458,7 +2677,7 @@ outputs:
       imports:
         - sv_core_news_md
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -2476,11 +2695,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd sv_core_news_sm && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd sv_core_news_sm
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -2489,7 +2709,7 @@ outputs:
       imports:
         - sv_core_news_sm
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -2509,11 +2729,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd xx_ent_wiki_sm && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd xx_ent_wiki_sm
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -2522,7 +2743,7 @@ outputs:
       imports:
         - xx_ent_wiki_sm
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -2540,11 +2761,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd xx_sent_ud_sm && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd xx_sent_ud_sm
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -2553,7 +2775,7 @@ outputs:
       imports:
         - xx_sent_ud_sm
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -2573,11 +2795,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd zh_core_web_lg && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd zh_core_web_lg
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -2587,7 +2810,7 @@ outputs:
       imports:
         - zh_core_web_lg
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -2605,11 +2828,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd zh_core_web_md && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd zh_core_web_md
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -2619,7 +2843,7 @@ outputs:
       imports:
         - zh_core_web_md
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -2637,11 +2861,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd zh_core_web_sm && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd zh_core_web_sm
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -2651,7 +2876,7 @@ outputs:
       imports:
         - zh_core_web_sm
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check
@@ -2669,11 +2894,12 @@ outputs:
     build:
       noarch: python
       script:
-        - cd zh_core_web_trf && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd zh_core_web_trf
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
     requirements:
       host:
-        - python {{ python_min }}.*
         - pip
+        - python {{ python_min }}
         - setuptools
       run:
         - python >={{ python_min }}
@@ -2684,7 +2910,7 @@ outputs:
       imports:
         - zh_core_web_trf
       requires:
-        - python ={{ python_min }}
+        - python {{ python_min }}
         - pip
       commands:
         - pip check

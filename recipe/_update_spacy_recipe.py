@@ -12,31 +12,39 @@ HEAD = "3d026eec88c53128ed71e10b399d0084361a11a3"
 BUILD_NUMBER = "0"
 
 # see https://github.com/conda-forge/spacy-models-feedstock/issues/2
-SKIP_PATTERNS = [
-    # needs sudachipy https://github.com/conda-forge/staged-recipes/issues/18871
-    "ja_core*",
+SKIP_PATTERNS: list[str] = [
     # needs pymorphy3 https://github.com/conda-forge/staged-recipes/issues/21931
     "ru_core_*",
     "uk_core_*",
 ]
-SKIP_PIP_CHECK = {
+
+SKIP_PIP_CHECK: dict[str, dict[str, str]] = {
     # Example (keep this for the future)
     #
     # "fr": {
     #     "dep_news_trf": "transformers 4.19.4 has requirement tokenizers!=0.11.3,<0.13,>=0.11.1, but you have tokenizers 0.13.2."
     # }
 }
-EXTRA_SUBREQS = {
+
+EXTRA_SUBREQS: dict[str, list[str]] = {
     # Example (keep this for the future)
     #
     ## TODO: remove after
     ##       https://github.com/conda-forge/spacy-pkuseg-feedstock/pull/11
     ## "spacy-pkuseg": ["cython"]
 }
-EXTRA_PKG_REQS = {
+
+EXTRA_PKG_REQS: dict[tuple[str, str], list[str]] = {
     # TODO: investigate
     # ImportError: tokenizers>=0.11.1,!=0.11.3,<0.13 is required for a normal functioning of this module, but found tokenizers==0.13.2.
     ("fr", "dep_news_trf"): ["tokenizers >=0.11.1,!=0.11.3,<0.13"]
+}
+
+REPLACE_REQS: dict[str, str] = {
+    # https://github.com/conda-forge/spacy-models-feedstock/pull/7#issuecomment-2508892104
+    # 99% convinced that this protobuf cap is based on some ancient issue that
+    # we've either fixed, or which doesn't apply to conda-forge in the first place.
+    "protobuf<3.21.0": "protobuf",
 }
 
 HERE = Path(__file__).parent
@@ -79,7 +87,7 @@ def update_recipe():
                     meta["requirements"] += extra_reqs
 
         meta["requirements"] += EXTRA_PKG_REQS.get((meta["lang"], meta["name"]), [])
-
+        meta["requirements"] = [REPLACE_REQS.get(r, r) for r in meta["requirements"]]
         meta["requirements"] = sorted(set(meta["requirements"]))
 
     context = dict(
