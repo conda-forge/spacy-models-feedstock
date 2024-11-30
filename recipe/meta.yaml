@@ -395,7 +395,7 @@ outputs:
       noarch: python
       script:
         - cd ca_core_news_lg
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -427,7 +427,7 @@ outputs:
       noarch: python
       script:
         - cd ca_core_news_md
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -459,7 +459,7 @@ outputs:
       noarch: python
       script:
         - cd ca_core_news_sm
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -491,7 +491,7 @@ outputs:
       noarch: python
       script:
         - cd ca_core_news_trf
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -526,7 +526,7 @@ outputs:
       noarch: python
       script:
         - cd da_core_news_lg
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -558,7 +558,7 @@ outputs:
       noarch: python
       script:
         - cd da_core_news_md
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -590,7 +590,7 @@ outputs:
       noarch: python
       script:
         - cd da_core_news_sm
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -622,7 +622,7 @@ outputs:
       noarch: python
       script:
         - cd da_core_news_trf
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -657,7 +657,7 @@ outputs:
       noarch: python
       script:
         - cd de_core_news_lg
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -689,7 +689,7 @@ outputs:
       noarch: python
       script:
         - cd de_core_news_md
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -721,7 +721,7 @@ outputs:
       noarch: python
       script:
         - cd de_core_news_sm
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -753,7 +753,7 @@ outputs:
       noarch: python
       script:
         - cd de_dep_news_trf
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -788,7 +788,7 @@ outputs:
       noarch: python
       script:
         - cd el_core_news_lg
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -820,7 +820,7 @@ outputs:
       noarch: python
       script:
         - cd el_core_news_md
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -852,7 +852,7 @@ outputs:
       noarch: python
       script:
         - cd el_core_news_sm
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -886,7 +886,7 @@ outputs:
       noarch: python
       script:
         - cd en_core_web_lg
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -918,7 +918,7 @@ outputs:
       noarch: python
       script:
         - cd en_core_web_md
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -950,7 +950,7 @@ outputs:
       noarch: python
       script:
         - cd en_core_web_sm
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -982,7 +982,7 @@ outputs:
       noarch: python
       script:
         - cd en_core_web_trf
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -1017,7 +1017,7 @@ outputs:
       noarch: python
       script:
         - cd es_core_news_lg
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -1049,7 +1049,7 @@ outputs:
       noarch: python
       script:
         - cd es_core_news_md
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -1081,7 +1081,7 @@ outputs:
       noarch: python
       script:
         - cd es_core_news_sm
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -1113,7 +1113,7 @@ outputs:
       noarch: python
       script:
         - cd es_dep_news_trf
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -1148,7 +1148,7 @@ outputs:
       noarch: python
       script:
         - cd fi_core_news_lg
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -1180,7 +1180,7 @@ outputs:
       noarch: python
       script:
         - cd fi_core_news_md
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -1212,7 +1212,7 @@ outputs:
       noarch: python
       script:
         - cd fi_core_news_sm
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -1246,7 +1246,7 @@ outputs:
       noarch: python
       script:
         - cd fr_core_news_lg
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -1278,7 +1278,7 @@ outputs:
       noarch: python
       script:
         - cd fr_core_news_md
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -1310,7 +1310,7 @@ outputs:
       noarch: python
       script:
         - cd fr_core_news_sm
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -1342,7 +1342,7 @@ outputs:
       noarch: python
       script:
         - cd fr_dep_news_trf
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -1380,7 +1380,7 @@ outputs:
       noarch: python
       script:
         - cd hr_core_news_lg
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -1412,7 +1412,7 @@ outputs:
       noarch: python
       script:
         - cd hr_core_news_md
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -1444,7 +1444,7 @@ outputs:
       noarch: python
       script:
         - cd hr_core_news_sm
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -1478,7 +1478,7 @@ outputs:
       noarch: python
       script:
         - cd it_core_news_lg
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -1510,7 +1510,7 @@ outputs:
       noarch: python
       script:
         - cd it_core_news_md
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -1542,7 +1542,7 @@ outputs:
       noarch: python
       script:
         - cd it_core_news_sm
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -1576,7 +1576,7 @@ outputs:
       noarch: python
       script:
         - cd ja_core_news_lg
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -1610,7 +1610,7 @@ outputs:
       noarch: python
       script:
         - cd ja_core_news_md
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -1644,7 +1644,7 @@ outputs:
       noarch: python
       script:
         - cd ja_core_news_sm
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -1678,7 +1678,7 @@ outputs:
       noarch: python
       script:
         - cd ja_core_news_trf
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -1715,7 +1715,7 @@ outputs:
       noarch: python
       script:
         - cd ko_core_news_lg
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -1747,7 +1747,7 @@ outputs:
       noarch: python
       script:
         - cd ko_core_news_md
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -1779,7 +1779,7 @@ outputs:
       noarch: python
       script:
         - cd ko_core_news_sm
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -1813,7 +1813,7 @@ outputs:
       noarch: python
       script:
         - cd lt_core_news_lg
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -1845,7 +1845,7 @@ outputs:
       noarch: python
       script:
         - cd lt_core_news_md
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -1877,7 +1877,7 @@ outputs:
       noarch: python
       script:
         - cd lt_core_news_sm
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -1911,7 +1911,7 @@ outputs:
       noarch: python
       script:
         - cd mk_core_news_lg
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -1943,7 +1943,7 @@ outputs:
       noarch: python
       script:
         - cd mk_core_news_md
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -1975,7 +1975,7 @@ outputs:
       noarch: python
       script:
         - cd mk_core_news_sm
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -2009,7 +2009,7 @@ outputs:
       noarch: python
       script:
         - cd nb_core_news_lg
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -2041,7 +2041,7 @@ outputs:
       noarch: python
       script:
         - cd nb_core_news_md
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -2073,7 +2073,7 @@ outputs:
       noarch: python
       script:
         - cd nb_core_news_sm
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -2107,7 +2107,7 @@ outputs:
       noarch: python
       script:
         - cd nl_core_news_lg
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -2139,7 +2139,7 @@ outputs:
       noarch: python
       script:
         - cd nl_core_news_md
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -2171,7 +2171,7 @@ outputs:
       noarch: python
       script:
         - cd nl_core_news_sm
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -2205,7 +2205,7 @@ outputs:
       noarch: python
       script:
         - cd pl_core_news_lg
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -2237,7 +2237,7 @@ outputs:
       noarch: python
       script:
         - cd pl_core_news_md
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -2269,7 +2269,7 @@ outputs:
       noarch: python
       script:
         - cd pl_core_news_sm
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -2303,7 +2303,7 @@ outputs:
       noarch: python
       script:
         - cd pt_core_news_lg
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -2335,7 +2335,7 @@ outputs:
       noarch: python
       script:
         - cd pt_core_news_md
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -2367,7 +2367,7 @@ outputs:
       noarch: python
       script:
         - cd pt_core_news_sm
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -2401,7 +2401,7 @@ outputs:
       noarch: python
       script:
         - cd ro_core_news_lg
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -2433,7 +2433,7 @@ outputs:
       noarch: python
       script:
         - cd ro_core_news_md
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -2465,7 +2465,7 @@ outputs:
       noarch: python
       script:
         - cd ro_core_news_sm
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -2499,7 +2499,7 @@ outputs:
       noarch: python
       script:
         - cd sl_core_news_lg
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -2531,7 +2531,7 @@ outputs:
       noarch: python
       script:
         - cd sl_core_news_md
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -2563,7 +2563,7 @@ outputs:
       noarch: python
       script:
         - cd sl_core_news_sm
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -2595,7 +2595,7 @@ outputs:
       noarch: python
       script:
         - cd sl_core_news_trf
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -2632,7 +2632,7 @@ outputs:
       noarch: python
       script:
         - cd sv_core_news_lg
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -2664,7 +2664,7 @@ outputs:
       noarch: python
       script:
         - cd sv_core_news_md
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -2696,7 +2696,7 @@ outputs:
       noarch: python
       script:
         - cd sv_core_news_sm
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -2730,7 +2730,7 @@ outputs:
       noarch: python
       script:
         - cd xx_ent_wiki_sm
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -2762,7 +2762,7 @@ outputs:
       noarch: python
       script:
         - cd xx_sent_ud_sm
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -2796,7 +2796,7 @@ outputs:
       noarch: python
       script:
         - cd zh_core_web_lg
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -2829,7 +2829,7 @@ outputs:
       noarch: python
       script:
         - cd zh_core_web_md
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -2862,7 +2862,7 @@ outputs:
       noarch: python
       script:
         - cd zh_core_web_sm
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
@@ -2895,7 +2895,7 @@ outputs:
       noarch: python
       script:
         - cd zh_core_web_trf
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip

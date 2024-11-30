@@ -50,7 +50,7 @@ outputs:
       noarch: python
       script:
         - cd << m.lang >>_<< m.name >>
-        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-checks
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - pip
