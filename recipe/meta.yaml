@@ -150,6 +150,8 @@ source:
   - url: https://github.com/explosion/spacy-models/releases/download/fr_dep_news_trf-{{ version }}/fr_dep_news_trf-{{ version }}.tar.gz
     sha256: 73816ee6730efe5ff2b3cca136fde69e09a69cfaa51d8b7905d7c5a75c1cedbc
     folder: fr_dep_news_trf
+    patches:
+      - patches/protobuf.diff
 {% endif %}  # fr
 
 {% if spacy_lang == "hr" %}
@@ -308,6 +310,8 @@ source:
   - url: https://github.com/explosion/spacy-models/releases/download/sl_core_news_trf-{{ version }}/sl_core_news_trf-{{ version }}.tar.gz
     sha256: f56260e7ef78f9bdda3bbf8728323bc220441a7bb1d787fffcaaabaeaf85b1c5
     folder: sl_core_news_trf
+    patches:
+      - patches/protobuf.diff
 {% endif %}  # sl
 
 {% if spacy_lang == "sv" %}
