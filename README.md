@@ -17,170 +17,38 @@ Development: https://github.com/explosion/spacy-models
 
 Documentation: https://spacy.io/models
 
-About spacy-model-el_core_news_lg
+About spacy-model-hr_core_news_lg
 ---------------------------------
 
 
 
 Package license: 
 
-Summary: Greek pipeline optimized for CPU.
-
-Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
-
-About spacy-model-el_core_news_md
----------------------------------
-
-
-
-Package license: 
-
-Summary: Greek pipeline optimized for CPU.
-
-Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
-
-About spacy-model-el_core_news_sm
----------------------------------
-
-
-
-Package license: 
-
-Summary: Greek pipeline optimized for CPU.
-
-Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
-
-About spacy-model-sv_core_news_lg
----------------------------------
-
-
-
-Package license: 
-
-Summary: Swedish pipeline optimized for CPU.
+Summary: Croatian pipeline optimized for CPU.
 
 Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
 
-About spacy-model-sv_core_news_md
+About spacy-model-hr_core_news_md
 ---------------------------------
 
 
 
 Package license: 
 
-Summary: Swedish pipeline optimized for CPU.
+Summary: Croatian pipeline optimized for CPU.
 
 Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
 
-About spacy-model-sv_core_news_sm
+About spacy-model-hr_core_news_sm
 ---------------------------------
 
 
 
 Package license: 
 
-Summary: Swedish pipeline optimized for CPU.
+Summary: Croatian pipeline optimized for CPU.
 
 Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
-
-About spacy-model-pt_core_news_lg
----------------------------------
-
-
-
-Package license: 
-
-Summary: Portuguese pipeline optimized for CPU.
-
-Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
-
-About spacy-model-pt_core_news_md
----------------------------------
-
-
-
-Package license: 
-
-Summary: Portuguese pipeline optimized for CPU.
-
-Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
-
-About spacy-model-pt_core_news_sm
----------------------------------
-
-
-
-Package license: 
-
-Summary: Portuguese pipeline optimized for CPU.
-
-Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
-
-About spacy-model-nb_core_news_lg
----------------------------------
-
-
-
-Package license: 
-
-Summary: Norwegian (Bokmål) pipeline optimized for CPU.
-
-Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
-
-About spacy-model-nb_core_news_md
----------------------------------
-
-
-
-Package license: 
-
-Summary: Norwegian (Bokmål) pipeline optimized for CPU.
-
-Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
-
-About spacy-model-nb_core_news_sm
----------------------------------
-
-
-
-Package license: 
-
-Summary: Norwegian (Bokmål) pipeline optimized for CPU.
-
-Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
-
-About spacy-model-lt_core_news_lg
----------------------------------
-
-
-
-Package license: 
-
-Summary: Lithuanian pipeline optimized for CPU.
-
-Components: tok2vec, morphologizer, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner.
-
-About spacy-model-lt_core_news_md
----------------------------------
-
-
-
-Package license: 
-
-Summary: Lithuanian pipeline optimized for CPU.
-
-Components: tok2vec, morphologizer, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner.
-
-About spacy-model-lt_core_news_sm
----------------------------------
-
-
-
-Package license: 
-
-Summary: Lithuanian pipeline optimized for CPU.
-
-Components: tok2vec, morphologizer, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner.
 
 About spacy-model-ca_core_news_lg
 ---------------------------------
@@ -226,6 +94,39 @@ Summary: Catalan transformer pipeline (Transformer(name='projecte-aina/roberta-b
 
 Components: transformer, morphologizer, parser, ner, attribute_ruler, lemmatizer.
 
+About spacy-model-mk_core_news_lg
+---------------------------------
+
+
+
+Package license: 
+
+Summary: Macedonian pipeline optimized for CPU.
+
+Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler, lemmatizer.
+
+About spacy-model-mk_core_news_md
+---------------------------------
+
+
+
+Package license: 
+
+Summary: Macedonian pipeline optimized for CPU.
+
+Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler, lemmatizer.
+
+About spacy-model-mk_core_news_sm
+---------------------------------
+
+
+
+Package license: 
+
+Summary: Macedonian pipeline optimized for CPU.
+
+Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler, lemmatizer.
+
 About spacy-model-ko_core_news_lg
 ---------------------------------
 
@@ -256,6 +157,182 @@ About spacy-model-ko_core_news_sm
 Package license: 
 
 Summary: Korean pipeline optimized for CPU.
+
+Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+
+About spacy-model-ro_core_news_lg
+---------------------------------
+
+
+
+Package license: 
+
+Summary: Romanian pipeline optimized for CPU.
+
+Components: tok2vec, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
+
+About spacy-model-ro_core_news_md
+---------------------------------
+
+
+
+Package license: 
+
+Summary: Romanian pipeline optimized for CPU.
+
+Components: tok2vec, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
+
+About spacy-model-ro_core_news_sm
+---------------------------------
+
+
+
+Package license: 
+
+Summary: Romanian pipeline optimized for CPU.
+
+Components: tok2vec, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
+
+About spacy-model-pt_core_news_lg
+---------------------------------
+
+
+
+Package license: 
+
+Summary: Portuguese pipeline optimized for CPU.
+
+Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
+
+About spacy-model-pt_core_news_md
+---------------------------------
+
+
+
+Package license: 
+
+Summary: Portuguese pipeline optimized for CPU.
+
+Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
+
+About spacy-model-pt_core_news_sm
+---------------------------------
+
+
+
+Package license: 
+
+Summary: Portuguese pipeline optimized for CPU.
+
+Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
+
+About spacy-model-de_core_news_lg
+---------------------------------
+
+
+
+Package license: 
+
+Summary: German pipeline optimized for CPU.
+
+Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+
+About spacy-model-de_core_news_md
+---------------------------------
+
+
+
+Package license: 
+
+Summary: German pipeline optimized for CPU.
+
+Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+
+About spacy-model-de_core_news_sm
+---------------------------------
+
+
+
+Package license: 
+
+Summary: German pipeline optimized for CPU.
+
+Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+
+About spacy-model-de_dep_news_trf
+---------------------------------
+
+
+
+Package license: 
+
+Summary: German transformer pipeline (Transformer(name='bert-base-german-cased', piece_encoder='bert-wordpiece', stride=136, type='bert', width=768, window=176, vocab_size=30000)).
+
+Components: transformer, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer).
+
+About spacy-model-nl_core_news_lg
+---------------------------------
+
+
+
+Package license: 
+
+Summary: Dutch pipeline optimized for CPU.
+
+Components: tok2vec, morphologizer, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+
+About spacy-model-nl_core_news_md
+---------------------------------
+
+
+
+Package license: 
+
+Summary: Dutch pipeline optimized for CPU.
+
+Components: tok2vec, morphologizer, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+
+About spacy-model-nl_core_news_sm
+---------------------------------
+
+
+
+Package license: 
+
+Summary: Dutch pipeline optimized for CPU.
+
+Components: tok2vec, morphologizer, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+
+About spacy-model-fi_core_news_lg
+---------------------------------
+
+
+
+Package license: 
+
+Summary: Finnish pipeline optimized for CPU.
+
+Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+
+About spacy-model-fi_core_news_md
+---------------------------------
+
+
+
+Package license: 
+
+Summary: Finnish pipeline optimized for CPU.
+
+Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+
+About spacy-model-fi_core_news_sm
+---------------------------------
+
+
+
+Package license: 
+
+Summary: Finnish pipeline optimized for CPU.
 
 Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
 
@@ -336,115 +413,38 @@ Summary: Spanish transformer pipeline (Transformer(name='dccuchile/bert-base-spa
 
 Components: transformer, morphologizer, parser, attribute_ruler, lemmatizer.
 
-About spacy-model-sl_core_news_lg
+About spacy-model-el_core_news_lg
 ---------------------------------
 
 
 
 Package license: 
 
-Summary: Slovenian pipeline optimized for CPU.
+Summary: Greek pipeline optimized for CPU.
 
-Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), attribute_ruler, senter, ner.
+Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
 
-About spacy-model-sl_core_news_md
+About spacy-model-el_core_news_md
 ---------------------------------
 
 
 
 Package license: 
 
-Summary: Slovenian pipeline optimized for CPU.
+Summary: Greek pipeline optimized for CPU.
 
-Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), attribute_ruler, senter, ner.
+Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
 
-About spacy-model-sl_core_news_sm
+About spacy-model-el_core_news_sm
 ---------------------------------
 
 
 
 Package license: 
 
-Summary: Slovenian pipeline optimized for CPU.
+Summary: Greek pipeline optimized for CPU.
 
-Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), attribute_ruler, senter, ner.
-
-About spacy-model-sl_core_news_trf
-----------------------------------
-
-
-
-Package license: 
-
-Summary: Slovenian transformer pipeline (Transformer(name='EMBEDDIA/sloberta', piece_encoder='camembert-sentencepiece', stride=128, type='camembert', width=768, window=168, vocab_size=32005)).
-
-Components: transformer, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), ner.
-
-About spacy-model-nl_core_news_lg
----------------------------------
-
-
-
-Package license: 
-
-Summary: Dutch pipeline optimized for CPU.
-
-Components: tok2vec, morphologizer, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner.
-
-About spacy-model-nl_core_news_md
----------------------------------
-
-
-
-Package license: 
-
-Summary: Dutch pipeline optimized for CPU.
-
-Components: tok2vec, morphologizer, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner.
-
-About spacy-model-nl_core_news_sm
----------------------------------
-
-
-
-Package license: 
-
-Summary: Dutch pipeline optimized for CPU.
-
-Components: tok2vec, morphologizer, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner.
-
-About spacy-model-ro_core_news_lg
----------------------------------
-
-
-
-Package license: 
-
-Summary: Romanian pipeline optimized for CPU.
-
-Components: tok2vec, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
-
-About spacy-model-ro_core_news_md
----------------------------------
-
-
-
-Package license: 
-
-Summary: Romanian pipeline optimized for CPU.
-
-Components: tok2vec, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
-
-About spacy-model-ro_core_news_sm
----------------------------------
-
-
-
-Package license: 
-
-Summary: Romanian pipeline optimized for CPU.
-
-Components: tok2vec, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
+Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
 
 About spacy-model-zh_core_web_lg
 --------------------------------
@@ -490,82 +490,236 @@ Summary: Chinese transformer pipeline (Transformer(name='bert-base-chinese', pie
 
 Components: transformer, tagger, parser, ner, attribute_ruler.
 
-About spacy-model-it_core_news_lg
+About spacy-model-fr_core_news_lg
 ---------------------------------
 
 
 
 Package license: 
 
-Summary: Italian pipeline optimized for CPU.
+Summary: French pipeline optimized for CPU.
+
+Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler, lemmatizer.
+
+About spacy-model-fr_core_news_md
+---------------------------------
+
+
+
+Package license: 
+
+Summary: French pipeline optimized for CPU.
+
+Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler, lemmatizer.
+
+About spacy-model-fr_core_news_sm
+---------------------------------
+
+
+
+Package license: 
+
+Summary: French pipeline optimized for CPU.
+
+Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler, lemmatizer.
+
+About spacy-model-fr_dep_news_trf
+---------------------------------
+
+
+
+Package license: 
+
+Summary: French transformer pipeline (Transformer(name='camembert-base', piece_encoder='camembert-sentencepiece', stride=128, type='camembert', width=768, window=168, vocab_size=32005)).
+
+Components: transformer, morphologizer, parser, attribute_ruler, lemmatizer.
+
+About spacy-model-nb_core_news_lg
+---------------------------------
+
+
+
+Package license: 
+
+Summary: Norwegian (Bokmål) pipeline optimized for CPU.
+
+Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
+
+About spacy-model-nb_core_news_md
+---------------------------------
+
+
+
+Package license: 
+
+Summary: Norwegian (Bokmål) pipeline optimized for CPU.
+
+Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
+
+About spacy-model-nb_core_news_sm
+---------------------------------
+
+
+
+Package license: 
+
+Summary: Norwegian (Bokmål) pipeline optimized for CPU.
+
+Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
+
+About spacy-model-lt_core_news_lg
+---------------------------------
+
+
+
+Package license: 
+
+Summary: Lithuanian pipeline optimized for CPU.
 
 Components: tok2vec, morphologizer, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner.
 
-About spacy-model-it_core_news_md
+About spacy-model-lt_core_news_md
 ---------------------------------
 
 
 
 Package license: 
 
-Summary: Italian pipeline optimized for CPU.
+Summary: Lithuanian pipeline optimized for CPU.
 
 Components: tok2vec, morphologizer, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner.
 
-About spacy-model-it_core_news_sm
+About spacy-model-lt_core_news_sm
 ---------------------------------
 
 
 
 Package license: 
 
-Summary: Italian pipeline optimized for CPU.
+Summary: Lithuanian pipeline optimized for CPU.
 
 Components: tok2vec, morphologizer, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner.
 
-About spacy-model-de_core_news_lg
+About spacy-model-sl_core_news_lg
 ---------------------------------
 
 
 
 Package license: 
 
-Summary: German pipeline optimized for CPU.
+Summary: Slovenian pipeline optimized for CPU.
+
+Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), attribute_ruler, senter, ner.
+
+About spacy-model-sl_core_news_md
+---------------------------------
+
+
+
+Package license: 
+
+Summary: Slovenian pipeline optimized for CPU.
+
+Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), attribute_ruler, senter, ner.
+
+About spacy-model-sl_core_news_sm
+---------------------------------
+
+
+
+Package license: 
+
+Summary: Slovenian pipeline optimized for CPU.
+
+Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), attribute_ruler, senter, ner.
+
+About spacy-model-sl_core_news_trf
+----------------------------------
+
+
+
+Package license: 
+
+Summary: Slovenian transformer pipeline (Transformer(name='EMBEDDIA/sloberta', piece_encoder='camembert-sentencepiece', stride=128, type='camembert', width=768, window=168, vocab_size=32005)).
+
+Components: transformer, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), ner.
+
+About spacy-model-ja_core_news_lg
+---------------------------------
+
+
+
+Package license: 
+
+Summary: Japanese pipeline optimized for CPU.
+
+Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler.
+
+About spacy-model-ja_core_news_md
+---------------------------------
+
+
+
+Package license: 
+
+Summary: Japanese pipeline optimized for CPU.
+
+Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler.
+
+About spacy-model-ja_core_news_sm
+---------------------------------
+
+
+
+Package license: 
+
+Summary: Japanese pipeline optimized for CPU.
+
+Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler.
+
+About spacy-model-ja_core_news_trf
+----------------------------------
+
+
+
+Package license: 
+
+Summary: Japanese transformer pipeline (Transformer(name='cl-tohoku/bert-base-japanese-char-v2', piece_encoder='char', stride=160, type='bert', width=768, window=216, vocab_size=6144)).
+
+Components: transformer, morphologizer, parser, ner.
+
+About spacy-model-sv_core_news_lg
+---------------------------------
+
+
+
+Package license: 
+
+Summary: Swedish pipeline optimized for CPU.
 
 Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
 
-About spacy-model-de_core_news_md
+About spacy-model-sv_core_news_md
 ---------------------------------
 
 
 
 Package license: 
 
-Summary: German pipeline optimized for CPU.
+Summary: Swedish pipeline optimized for CPU.
 
 Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
 
-About spacy-model-de_core_news_sm
+About spacy-model-sv_core_news_sm
 ---------------------------------
 
 
 
 Package license: 
 
-Summary: German pipeline optimized for CPU.
+Summary: Swedish pipeline optimized for CPU.
 
 Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
-
-About spacy-model-de_dep_news_trf
----------------------------------
-
-
-
-Package license: 
-
-Summary: German transformer pipeline (Transformer(name='bert-base-german-cased', piece_encoder='bert-wordpiece', stride=136, type='bert', width=768, window=176, vocab_size=30000)).
-
-Components: transformer, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer).
 
 About spacy-model-en_core_web_lg
 --------------------------------
@@ -611,39 +765,6 @@ Summary: English transformer pipeline (Transformer(name='roberta-base', piece_en
 
 Components: transformer, tagger, parser, ner, attribute_ruler, lemmatizer.
 
-About spacy-model-mk_core_news_lg
----------------------------------
-
-
-
-Package license: 
-
-Summary: Macedonian pipeline optimized for CPU.
-
-Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler, lemmatizer.
-
-About spacy-model-mk_core_news_md
----------------------------------
-
-
-
-Package license: 
-
-Summary: Macedonian pipeline optimized for CPU.
-
-Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler, lemmatizer.
-
-About spacy-model-mk_core_news_sm
----------------------------------
-
-
-
-Package license: 
-
-Summary: Macedonian pipeline optimized for CPU.
-
-Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler, lemmatizer.
-
 About spacy-model-xx_ent_wiki_sm
 --------------------------------
 
@@ -666,115 +787,38 @@ Summary: Multi-language pipeline optimized for CPU.
 
 Components: senter.
 
-About spacy-model-fi_core_news_lg
+About spacy-model-it_core_news_lg
 ---------------------------------
 
 
 
 Package license: 
 
-Summary: Finnish pipeline optimized for CPU.
+Summary: Italian pipeline optimized for CPU.
 
-Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+Components: tok2vec, morphologizer, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner.
 
-About spacy-model-fi_core_news_md
+About spacy-model-it_core_news_md
 ---------------------------------
 
 
 
 Package license: 
 
-Summary: Finnish pipeline optimized for CPU.
+Summary: Italian pipeline optimized for CPU.
 
-Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+Components: tok2vec, morphologizer, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner.
 
-About spacy-model-fi_core_news_sm
+About spacy-model-it_core_news_sm
 ---------------------------------
 
 
 
 Package license: 
 
-Summary: Finnish pipeline optimized for CPU.
+Summary: Italian pipeline optimized for CPU.
 
-Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
-
-About spacy-model-fr_core_news_lg
----------------------------------
-
-
-
-Package license: 
-
-Summary: French pipeline optimized for CPU.
-
-Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler, lemmatizer.
-
-About spacy-model-fr_core_news_md
----------------------------------
-
-
-
-Package license: 
-
-Summary: French pipeline optimized for CPU.
-
-Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler, lemmatizer.
-
-About spacy-model-fr_core_news_sm
----------------------------------
-
-
-
-Package license: 
-
-Summary: French pipeline optimized for CPU.
-
-Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler, lemmatizer.
-
-About spacy-model-fr_dep_news_trf
----------------------------------
-
-
-
-Package license: 
-
-Summary: French transformer pipeline (Transformer(name='camembert-base', piece_encoder='camembert-sentencepiece', stride=128, type='camembert', width=768, window=168, vocab_size=32005)).
-
-Components: transformer, morphologizer, parser, attribute_ruler, lemmatizer.
-
-About spacy-model-hr_core_news_lg
----------------------------------
-
-
-
-Package license: 
-
-Summary: Croatian pipeline optimized for CPU.
-
-Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
-
-About spacy-model-hr_core_news_md
----------------------------------
-
-
-
-Package license: 
-
-Summary: Croatian pipeline optimized for CPU.
-
-Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
-
-About spacy-model-hr_core_news_sm
----------------------------------
-
-
-
-Package license: 
-
-Summary: Croatian pipeline optimized for CPU.
-
-Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+Components: tok2vec, morphologizer, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner.
 
 About spacy-model-da_core_news_lg
 ---------------------------------
@@ -874,6 +918,10 @@ Current release info
 | [![Conda Recipe](https://img.shields.io/badge/recipe-spacy--model--it_core_news_lg-green.svg)](https://anaconda.org/conda-forge/spacy-model-it_core_news_lg) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/spacy-model-it_core_news_lg.svg)](https://anaconda.org/conda-forge/spacy-model-it_core_news_lg) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/spacy-model-it_core_news_lg.svg)](https://anaconda.org/conda-forge/spacy-model-it_core_news_lg) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/spacy-model-it_core_news_lg.svg)](https://anaconda.org/conda-forge/spacy-model-it_core_news_lg) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-spacy--model--it_core_news_md-green.svg)](https://anaconda.org/conda-forge/spacy-model-it_core_news_md) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/spacy-model-it_core_news_md.svg)](https://anaconda.org/conda-forge/spacy-model-it_core_news_md) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/spacy-model-it_core_news_md.svg)](https://anaconda.org/conda-forge/spacy-model-it_core_news_md) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/spacy-model-it_core_news_md.svg)](https://anaconda.org/conda-forge/spacy-model-it_core_news_md) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-spacy--model--it_core_news_sm-green.svg)](https://anaconda.org/conda-forge/spacy-model-it_core_news_sm) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/spacy-model-it_core_news_sm.svg)](https://anaconda.org/conda-forge/spacy-model-it_core_news_sm) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/spacy-model-it_core_news_sm.svg)](https://anaconda.org/conda-forge/spacy-model-it_core_news_sm) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/spacy-model-it_core_news_sm.svg)](https://anaconda.org/conda-forge/spacy-model-it_core_news_sm) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-spacy--model--ja_core_news_lg-green.svg)](https://anaconda.org/conda-forge/spacy-model-ja_core_news_lg) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/spacy-model-ja_core_news_lg.svg)](https://anaconda.org/conda-forge/spacy-model-ja_core_news_lg) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/spacy-model-ja_core_news_lg.svg)](https://anaconda.org/conda-forge/spacy-model-ja_core_news_lg) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/spacy-model-ja_core_news_lg.svg)](https://anaconda.org/conda-forge/spacy-model-ja_core_news_lg) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-spacy--model--ja_core_news_md-green.svg)](https://anaconda.org/conda-forge/spacy-model-ja_core_news_md) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/spacy-model-ja_core_news_md.svg)](https://anaconda.org/conda-forge/spacy-model-ja_core_news_md) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/spacy-model-ja_core_news_md.svg)](https://anaconda.org/conda-forge/spacy-model-ja_core_news_md) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/spacy-model-ja_core_news_md.svg)](https://anaconda.org/conda-forge/spacy-model-ja_core_news_md) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-spacy--model--ja_core_news_sm-green.svg)](https://anaconda.org/conda-forge/spacy-model-ja_core_news_sm) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/spacy-model-ja_core_news_sm.svg)](https://anaconda.org/conda-forge/spacy-model-ja_core_news_sm) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/spacy-model-ja_core_news_sm.svg)](https://anaconda.org/conda-forge/spacy-model-ja_core_news_sm) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/spacy-model-ja_core_news_sm.svg)](https://anaconda.org/conda-forge/spacy-model-ja_core_news_sm) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-spacy--model--ja_core_news_trf-green.svg)](https://anaconda.org/conda-forge/spacy-model-ja_core_news_trf) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/spacy-model-ja_core_news_trf.svg)](https://anaconda.org/conda-forge/spacy-model-ja_core_news_trf) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/spacy-model-ja_core_news_trf.svg)](https://anaconda.org/conda-forge/spacy-model-ja_core_news_trf) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/spacy-model-ja_core_news_trf.svg)](https://anaconda.org/conda-forge/spacy-model-ja_core_news_trf) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-spacy--model--ko_core_news_lg-green.svg)](https://anaconda.org/conda-forge/spacy-model-ko_core_news_lg) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/spacy-model-ko_core_news_lg.svg)](https://anaconda.org/conda-forge/spacy-model-ko_core_news_lg) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/spacy-model-ko_core_news_lg.svg)](https://anaconda.org/conda-forge/spacy-model-ko_core_news_lg) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/spacy-model-ko_core_news_lg.svg)](https://anaconda.org/conda-forge/spacy-model-ko_core_news_lg) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-spacy--model--ko_core_news_md-green.svg)](https://anaconda.org/conda-forge/spacy-model-ko_core_news_md) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/spacy-model-ko_core_news_md.svg)](https://anaconda.org/conda-forge/spacy-model-ko_core_news_md) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/spacy-model-ko_core_news_md.svg)](https://anaconda.org/conda-forge/spacy-model-ko_core_news_md) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/spacy-model-ko_core_news_md.svg)](https://anaconda.org/conda-forge/spacy-model-ko_core_news_md) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-spacy--model--ko_core_news_sm-green.svg)](https://anaconda.org/conda-forge/spacy-model-ko_core_news_sm) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/spacy-model-ko_core_news_sm.svg)](https://anaconda.org/conda-forge/spacy-model-ko_core_news_sm) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/spacy-model-ko_core_news_sm.svg)](https://anaconda.org/conda-forge/spacy-model-ko_core_news_sm) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/spacy-model-ko_core_news_sm.svg)](https://anaconda.org/conda-forge/spacy-model-ko_core_news_sm) |
@@ -922,16 +970,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `spacy-model-ca_core_news_lg, spacy-model-ca_core_news_md, spacy-model-ca_core_news_sm, spacy-model-ca_core_news_trf, spacy-model-da_core_news_lg, spacy-model-da_core_news_md, spacy-model-da_core_news_sm, spacy-model-da_core_news_trf, spacy-model-de_core_news_lg, spacy-model-de_core_news_md, spacy-model-de_core_news_sm, spacy-model-de_dep_news_trf, spacy-model-el_core_news_lg, spacy-model-el_core_news_md, spacy-model-el_core_news_sm, spacy-model-en_core_web_lg, spacy-model-en_core_web_md, spacy-model-en_core_web_sm, spacy-model-en_core_web_trf, spacy-model-es_core_news_lg, spacy-model-es_core_news_md, spacy-model-es_core_news_sm, spacy-model-es_dep_news_trf, spacy-model-fi_core_news_lg, spacy-model-fi_core_news_md, spacy-model-fi_core_news_sm, spacy-model-fr_core_news_lg, spacy-model-fr_core_news_md, spacy-model-fr_core_news_sm, spacy-model-fr_dep_news_trf, spacy-model-hr_core_news_lg, spacy-model-hr_core_news_md, spacy-model-hr_core_news_sm, spacy-model-it_core_news_lg, spacy-model-it_core_news_md, spacy-model-it_core_news_sm, spacy-model-ko_core_news_lg, spacy-model-ko_core_news_md, spacy-model-ko_core_news_sm, spacy-model-lt_core_news_lg, spacy-model-lt_core_news_md, spacy-model-lt_core_news_sm, spacy-model-mk_core_news_lg, spacy-model-mk_core_news_md, spacy-model-mk_core_news_sm, spacy-model-nb_core_news_lg, spacy-model-nb_core_news_md, spacy-model-nb_core_news_sm, spacy-model-nl_core_news_lg, spacy-model-nl_core_news_md, spacy-model-nl_core_news_sm, spacy-model-pl_core_news_lg, spacy-model-pl_core_news_md, spacy-model-pl_core_news_sm, spacy-model-pt_core_news_lg, spacy-model-pt_core_news_md, spacy-model-pt_core_news_sm, spacy-model-ro_core_news_lg, spacy-model-ro_core_news_md, spacy-model-ro_core_news_sm, spacy-model-sl_core_news_lg, spacy-model-sl_core_news_md, spacy-model-sl_core_news_sm, spacy-model-sl_core_news_trf, spacy-model-sv_core_news_lg, spacy-model-sv_core_news_md, spacy-model-sv_core_news_sm, spacy-model-xx_ent_wiki_sm, spacy-model-xx_sent_ud_sm, spacy-model-zh_core_web_lg, spacy-model-zh_core_web_md, spacy-model-zh_core_web_sm, spacy-model-zh_core_web_trf` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `spacy-model-ca_core_news_lg, spacy-model-ca_core_news_md, spacy-model-ca_core_news_sm, spacy-model-ca_core_news_trf, spacy-model-da_core_news_lg, spacy-model-da_core_news_md, spacy-model-da_core_news_sm, spacy-model-da_core_news_trf, spacy-model-de_core_news_lg, spacy-model-de_core_news_md, spacy-model-de_core_news_sm, spacy-model-de_dep_news_trf, spacy-model-el_core_news_lg, spacy-model-el_core_news_md, spacy-model-el_core_news_sm, spacy-model-en_core_web_lg, spacy-model-en_core_web_md, spacy-model-en_core_web_sm, spacy-model-en_core_web_trf, spacy-model-es_core_news_lg, spacy-model-es_core_news_md, spacy-model-es_core_news_sm, spacy-model-es_dep_news_trf, spacy-model-fi_core_news_lg, spacy-model-fi_core_news_md, spacy-model-fi_core_news_sm, spacy-model-fr_core_news_lg, spacy-model-fr_core_news_md, spacy-model-fr_core_news_sm, spacy-model-fr_dep_news_trf, spacy-model-hr_core_news_lg, spacy-model-hr_core_news_md, spacy-model-hr_core_news_sm, spacy-model-it_core_news_lg, spacy-model-it_core_news_md, spacy-model-it_core_news_sm, spacy-model-ja_core_news_lg, spacy-model-ja_core_news_md, spacy-model-ja_core_news_sm, spacy-model-ja_core_news_trf, spacy-model-ko_core_news_lg, spacy-model-ko_core_news_md, spacy-model-ko_core_news_sm, spacy-model-lt_core_news_lg, spacy-model-lt_core_news_md, spacy-model-lt_core_news_sm, spacy-model-mk_core_news_lg, spacy-model-mk_core_news_md, spacy-model-mk_core_news_sm, spacy-model-nb_core_news_lg, spacy-model-nb_core_news_md, spacy-model-nb_core_news_sm, spacy-model-nl_core_news_lg, spacy-model-nl_core_news_md, spacy-model-nl_core_news_sm, spacy-model-pl_core_news_lg, spacy-model-pl_core_news_md, spacy-model-pl_core_news_sm, spacy-model-pt_core_news_lg, spacy-model-pt_core_news_md, spacy-model-pt_core_news_sm, spacy-model-ro_core_news_lg, spacy-model-ro_core_news_md, spacy-model-ro_core_news_sm, spacy-model-sl_core_news_lg, spacy-model-sl_core_news_md, spacy-model-sl_core_news_sm, spacy-model-sl_core_news_trf, spacy-model-sv_core_news_lg, spacy-model-sv_core_news_md, spacy-model-sv_core_news_sm, spacy-model-xx_ent_wiki_sm, spacy-model-xx_sent_ud_sm, spacy-model-zh_core_web_lg, spacy-model-zh_core_web_md, spacy-model-zh_core_web_sm, spacy-model-zh_core_web_trf` can be installed with `conda`:
 
 ```
-conda install spacy-model-ca_core_news_lg spacy-model-ca_core_news_md spacy-model-ca_core_news_sm spacy-model-ca_core_news_trf spacy-model-da_core_news_lg spacy-model-da_core_news_md spacy-model-da_core_news_sm spacy-model-da_core_news_trf spacy-model-de_core_news_lg spacy-model-de_core_news_md spacy-model-de_core_news_sm spacy-model-de_dep_news_trf spacy-model-el_core_news_lg spacy-model-el_core_news_md spacy-model-el_core_news_sm spacy-model-en_core_web_lg spacy-model-en_core_web_md spacy-model-en_core_web_sm spacy-model-en_core_web_trf spacy-model-es_core_news_lg spacy-model-es_core_news_md spacy-model-es_core_news_sm spacy-model-es_dep_news_trf spacy-model-fi_core_news_lg spacy-model-fi_core_news_md spacy-model-fi_core_news_sm spacy-model-fr_core_news_lg spacy-model-fr_core_news_md spacy-model-fr_core_news_sm spacy-model-fr_dep_news_trf spacy-model-hr_core_news_lg spacy-model-hr_core_news_md spacy-model-hr_core_news_sm spacy-model-it_core_news_lg spacy-model-it_core_news_md spacy-model-it_core_news_sm spacy-model-ko_core_news_lg spacy-model-ko_core_news_md spacy-model-ko_core_news_sm spacy-model-lt_core_news_lg spacy-model-lt_core_news_md spacy-model-lt_core_news_sm spacy-model-mk_core_news_lg spacy-model-mk_core_news_md spacy-model-mk_core_news_sm spacy-model-nb_core_news_lg spacy-model-nb_core_news_md spacy-model-nb_core_news_sm spacy-model-nl_core_news_lg spacy-model-nl_core_news_md spacy-model-nl_core_news_sm spacy-model-pl_core_news_lg spacy-model-pl_core_news_md spacy-model-pl_core_news_sm spacy-model-pt_core_news_lg spacy-model-pt_core_news_md spacy-model-pt_core_news_sm spacy-model-ro_core_news_lg spacy-model-ro_core_news_md spacy-model-ro_core_news_sm spacy-model-sl_core_news_lg spacy-model-sl_core_news_md spacy-model-sl_core_news_sm spacy-model-sl_core_news_trf spacy-model-sv_core_news_lg spacy-model-sv_core_news_md spacy-model-sv_core_news_sm spacy-model-xx_ent_wiki_sm spacy-model-xx_sent_ud_sm spacy-model-zh_core_web_lg spacy-model-zh_core_web_md spacy-model-zh_core_web_sm spacy-model-zh_core_web_trf
+conda install spacy-model-ca_core_news_lg spacy-model-ca_core_news_md spacy-model-ca_core_news_sm spacy-model-ca_core_news_trf spacy-model-da_core_news_lg spacy-model-da_core_news_md spacy-model-da_core_news_sm spacy-model-da_core_news_trf spacy-model-de_core_news_lg spacy-model-de_core_news_md spacy-model-de_core_news_sm spacy-model-de_dep_news_trf spacy-model-el_core_news_lg spacy-model-el_core_news_md spacy-model-el_core_news_sm spacy-model-en_core_web_lg spacy-model-en_core_web_md spacy-model-en_core_web_sm spacy-model-en_core_web_trf spacy-model-es_core_news_lg spacy-model-es_core_news_md spacy-model-es_core_news_sm spacy-model-es_dep_news_trf spacy-model-fi_core_news_lg spacy-model-fi_core_news_md spacy-model-fi_core_news_sm spacy-model-fr_core_news_lg spacy-model-fr_core_news_md spacy-model-fr_core_news_sm spacy-model-fr_dep_news_trf spacy-model-hr_core_news_lg spacy-model-hr_core_news_md spacy-model-hr_core_news_sm spacy-model-it_core_news_lg spacy-model-it_core_news_md spacy-model-it_core_news_sm spacy-model-ja_core_news_lg spacy-model-ja_core_news_md spacy-model-ja_core_news_sm spacy-model-ja_core_news_trf spacy-model-ko_core_news_lg spacy-model-ko_core_news_md spacy-model-ko_core_news_sm spacy-model-lt_core_news_lg spacy-model-lt_core_news_md spacy-model-lt_core_news_sm spacy-model-mk_core_news_lg spacy-model-mk_core_news_md spacy-model-mk_core_news_sm spacy-model-nb_core_news_lg spacy-model-nb_core_news_md spacy-model-nb_core_news_sm spacy-model-nl_core_news_lg spacy-model-nl_core_news_md spacy-model-nl_core_news_sm spacy-model-pl_core_news_lg spacy-model-pl_core_news_md spacy-model-pl_core_news_sm spacy-model-pt_core_news_lg spacy-model-pt_core_news_md spacy-model-pt_core_news_sm spacy-model-ro_core_news_lg spacy-model-ro_core_news_md spacy-model-ro_core_news_sm spacy-model-sl_core_news_lg spacy-model-sl_core_news_md spacy-model-sl_core_news_sm spacy-model-sl_core_news_trf spacy-model-sv_core_news_lg spacy-model-sv_core_news_md spacy-model-sv_core_news_sm spacy-model-xx_ent_wiki_sm spacy-model-xx_sent_ud_sm spacy-model-zh_core_web_lg spacy-model-zh_core_web_md spacy-model-zh_core_web_sm spacy-model-zh_core_web_trf
 ```
 
 or with `mamba`:
 
 ```
-mamba install spacy-model-ca_core_news_lg spacy-model-ca_core_news_md spacy-model-ca_core_news_sm spacy-model-ca_core_news_trf spacy-model-da_core_news_lg spacy-model-da_core_news_md spacy-model-da_core_news_sm spacy-model-da_core_news_trf spacy-model-de_core_news_lg spacy-model-de_core_news_md spacy-model-de_core_news_sm spacy-model-de_dep_news_trf spacy-model-el_core_news_lg spacy-model-el_core_news_md spacy-model-el_core_news_sm spacy-model-en_core_web_lg spacy-model-en_core_web_md spacy-model-en_core_web_sm spacy-model-en_core_web_trf spacy-model-es_core_news_lg spacy-model-es_core_news_md spacy-model-es_core_news_sm spacy-model-es_dep_news_trf spacy-model-fi_core_news_lg spacy-model-fi_core_news_md spacy-model-fi_core_news_sm spacy-model-fr_core_news_lg spacy-model-fr_core_news_md spacy-model-fr_core_news_sm spacy-model-fr_dep_news_trf spacy-model-hr_core_news_lg spacy-model-hr_core_news_md spacy-model-hr_core_news_sm spacy-model-it_core_news_lg spacy-model-it_core_news_md spacy-model-it_core_news_sm spacy-model-ko_core_news_lg spacy-model-ko_core_news_md spacy-model-ko_core_news_sm spacy-model-lt_core_news_lg spacy-model-lt_core_news_md spacy-model-lt_core_news_sm spacy-model-mk_core_news_lg spacy-model-mk_core_news_md spacy-model-mk_core_news_sm spacy-model-nb_core_news_lg spacy-model-nb_core_news_md spacy-model-nb_core_news_sm spacy-model-nl_core_news_lg spacy-model-nl_core_news_md spacy-model-nl_core_news_sm spacy-model-pl_core_news_lg spacy-model-pl_core_news_md spacy-model-pl_core_news_sm spacy-model-pt_core_news_lg spacy-model-pt_core_news_md spacy-model-pt_core_news_sm spacy-model-ro_core_news_lg spacy-model-ro_core_news_md spacy-model-ro_core_news_sm spacy-model-sl_core_news_lg spacy-model-sl_core_news_md spacy-model-sl_core_news_sm spacy-model-sl_core_news_trf spacy-model-sv_core_news_lg spacy-model-sv_core_news_md spacy-model-sv_core_news_sm spacy-model-xx_ent_wiki_sm spacy-model-xx_sent_ud_sm spacy-model-zh_core_web_lg spacy-model-zh_core_web_md spacy-model-zh_core_web_sm spacy-model-zh_core_web_trf
+mamba install spacy-model-ca_core_news_lg spacy-model-ca_core_news_md spacy-model-ca_core_news_sm spacy-model-ca_core_news_trf spacy-model-da_core_news_lg spacy-model-da_core_news_md spacy-model-da_core_news_sm spacy-model-da_core_news_trf spacy-model-de_core_news_lg spacy-model-de_core_news_md spacy-model-de_core_news_sm spacy-model-de_dep_news_trf spacy-model-el_core_news_lg spacy-model-el_core_news_md spacy-model-el_core_news_sm spacy-model-en_core_web_lg spacy-model-en_core_web_md spacy-model-en_core_web_sm spacy-model-en_core_web_trf spacy-model-es_core_news_lg spacy-model-es_core_news_md spacy-model-es_core_news_sm spacy-model-es_dep_news_trf spacy-model-fi_core_news_lg spacy-model-fi_core_news_md spacy-model-fi_core_news_sm spacy-model-fr_core_news_lg spacy-model-fr_core_news_md spacy-model-fr_core_news_sm spacy-model-fr_dep_news_trf spacy-model-hr_core_news_lg spacy-model-hr_core_news_md spacy-model-hr_core_news_sm spacy-model-it_core_news_lg spacy-model-it_core_news_md spacy-model-it_core_news_sm spacy-model-ja_core_news_lg spacy-model-ja_core_news_md spacy-model-ja_core_news_sm spacy-model-ja_core_news_trf spacy-model-ko_core_news_lg spacy-model-ko_core_news_md spacy-model-ko_core_news_sm spacy-model-lt_core_news_lg spacy-model-lt_core_news_md spacy-model-lt_core_news_sm spacy-model-mk_core_news_lg spacy-model-mk_core_news_md spacy-model-mk_core_news_sm spacy-model-nb_core_news_lg spacy-model-nb_core_news_md spacy-model-nb_core_news_sm spacy-model-nl_core_news_lg spacy-model-nl_core_news_md spacy-model-nl_core_news_sm spacy-model-pl_core_news_lg spacy-model-pl_core_news_md spacy-model-pl_core_news_sm spacy-model-pt_core_news_lg spacy-model-pt_core_news_md spacy-model-pt_core_news_sm spacy-model-ro_core_news_lg spacy-model-ro_core_news_md spacy-model-ro_core_news_sm spacy-model-sl_core_news_lg spacy-model-sl_core_news_md spacy-model-sl_core_news_sm spacy-model-sl_core_news_trf spacy-model-sv_core_news_lg spacy-model-sv_core_news_md spacy-model-sv_core_news_sm spacy-model-xx_ent_wiki_sm spacy-model-xx_sent_ud_sm spacy-model-zh_core_web_lg spacy-model-zh_core_web_md spacy-model-zh_core_web_sm spacy-model-zh_core_web_trf
 ```
 
 It is possible to list all of the versions of `spacy-model-ca_core_news_lg` available on your platform with `conda`:
