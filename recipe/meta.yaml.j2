@@ -81,6 +81,7 @@ outputs:
       summary: << m.description.split(". ", 1)[0].strip() >>.
       description: |-
         << m.description.split(". ", 1)[1].strip() >>
+      license: MIT
       license_file:
         - << m.lang >>_<< m.name >>/LICENSE
         - << m.lang >>_<< m.name >>/LICENSES_SOURCES

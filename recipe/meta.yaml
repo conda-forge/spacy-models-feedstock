@@ -419,6 +419,7 @@ outputs:
       summary: Catalan pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler, lemmatizer.
+      license: MIT
       license_file:
         - ca_core_news_lg/LICENSE
         - ca_core_news_lg/LICENSES_SOURCES
@@ -452,6 +453,7 @@ outputs:
       summary: Catalan pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler, lemmatizer.
+      license: MIT
       license_file:
         - ca_core_news_md/LICENSE
         - ca_core_news_md/LICENSES_SOURCES
@@ -485,6 +487,7 @@ outputs:
       summary: Catalan pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler, lemmatizer.
+      license: MIT
       license_file:
         - ca_core_news_sm/LICENSE
         - ca_core_news_sm/LICENSES_SOURCES
@@ -519,6 +522,7 @@ outputs:
       summary: Catalan transformer pipeline (Transformer(name='projecte-aina/roberta-base-ca-v2', piece_encoder='byte-bpe', stride=112, type='roberta', width=768, window=144, vocab_size=50262)).
       description: |-
         Components: transformer, morphologizer, parser, ner, attribute_ruler, lemmatizer.
+      license: MIT
       license_file:
         - ca_core_news_trf/LICENSE
         - ca_core_news_trf/LICENSES_SOURCES
@@ -554,6 +558,7 @@ outputs:
       summary: Danish pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
+      license: MIT
       license_file:
         - da_core_news_lg/LICENSE
         - da_core_news_lg/LICENSES_SOURCES
@@ -587,6 +592,7 @@ outputs:
       summary: Danish pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
+      license: MIT
       license_file:
         - da_core_news_md/LICENSE
         - da_core_news_md/LICENSES_SOURCES
@@ -620,6 +626,7 @@ outputs:
       summary: Danish pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
+      license: MIT
       license_file:
         - da_core_news_sm/LICENSE
         - da_core_news_sm/LICENSES_SOURCES
@@ -654,6 +661,7 @@ outputs:
       summary: Danish transformer pipeline (Transformer(name='vesteinn/DanskBERT', piece_encoder='xlm-roberta-sentencepiece', stride=120, type='xlm-roberta', width=768, window=152, vocab_size=50005)).
       description: |-
         Components: transformer, morphologizer, parser, lemmatizer (trainable_lemmatizer), ner, attribute_ruler.
+      license: MIT
       license_file:
         - da_core_news_trf/LICENSE
         - da_core_news_trf/LICENSES_SOURCES
@@ -689,6 +697,7 @@ outputs:
       summary: German pipeline optimized for CPU.
       description: |-
         Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+      license: MIT
       license_file:
         - de_core_news_lg/LICENSE
         - de_core_news_lg/LICENSES_SOURCES
@@ -722,6 +731,7 @@ outputs:
       summary: German pipeline optimized for CPU.
       description: |-
         Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+      license: MIT
       license_file:
         - de_core_news_md/LICENSE
         - de_core_news_md/LICENSES_SOURCES
@@ -755,6 +765,7 @@ outputs:
       summary: German pipeline optimized for CPU.
       description: |-
         Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+      license: MIT
       license_file:
         - de_core_news_sm/LICENSE
         - de_core_news_sm/LICENSES_SOURCES
@@ -789,6 +800,7 @@ outputs:
       summary: German transformer pipeline (Transformer(name='bert-base-german-cased', piece_encoder='bert-wordpiece', stride=136, type='bert', width=768, window=176, vocab_size=30000)).
       description: |-
         Components: transformer, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer).
+      license: MIT
       license_file:
         - de_dep_news_trf/LICENSE
         - de_dep_news_trf/LICENSES_SOURCES
@@ -824,6 +836,7 @@ outputs:
       summary: Greek pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
+      license: MIT
       license_file:
         - el_core_news_lg/LICENSE
         - el_core_news_lg/LICENSES_SOURCES
@@ -857,6 +870,7 @@ outputs:
       summary: Greek pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
+      license: MIT
       license_file:
         - el_core_news_md/LICENSE
         - el_core_news_md/LICENSES_SOURCES
@@ -890,6 +904,7 @@ outputs:
       summary: Greek pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
+      license: MIT
       license_file:
         - el_core_news_sm/LICENSE
         - el_core_news_sm/LICENSES_SOURCES
@@ -925,6 +940,7 @@ outputs:
       summary: English pipeline optimized for CPU.
       description: |-
         Components: tok2vec, tagger, parser, senter, ner, attribute_ruler, lemmatizer.
+      license: MIT
       license_file:
         - en_core_web_lg/LICENSE
         - en_core_web_lg/LICENSES_SOURCES
@@ -958,6 +974,7 @@ outputs:
       summary: English pipeline optimized for CPU.
       description: |-
         Components: tok2vec, tagger, parser, senter, ner, attribute_ruler, lemmatizer.
+      license: MIT
       license_file:
         - en_core_web_md/LICENSE
         - en_core_web_md/LICENSES_SOURCES
@@ -991,6 +1008,7 @@ outputs:
       summary: English pipeline optimized for CPU.
       description: |-
         Components: tok2vec, tagger, parser, senter, ner, attribute_ruler, lemmatizer.
+      license: MIT
       license_file:
         - en_core_web_sm/LICENSE
         - en_core_web_sm/LICENSES_SOURCES
@@ -1025,6 +1043,7 @@ outputs:
       summary: English transformer pipeline (Transformer(name='roberta-base', piece_encoder='byte-bpe', stride=104, type='roberta', width=768, window=144, vocab_size=50265)).
       description: |-
         Components: transformer, tagger, parser, ner, attribute_ruler, lemmatizer.
+      license: MIT
       license_file:
         - en_core_web_trf/LICENSE
         - en_core_web_trf/LICENSES_SOURCES
@@ -1060,6 +1079,7 @@ outputs:
       summary: Spanish pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler, lemmatizer.
+      license: MIT
       license_file:
         - es_core_news_lg/LICENSE
         - es_core_news_lg/LICENSES_SOURCES
@@ -1093,6 +1113,7 @@ outputs:
       summary: Spanish pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler, lemmatizer.
+      license: MIT
       license_file:
         - es_core_news_md/LICENSE
         - es_core_news_md/LICENSES_SOURCES
@@ -1126,6 +1147,7 @@ outputs:
       summary: Spanish pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler, lemmatizer.
+      license: MIT
       license_file:
         - es_core_news_sm/LICENSE
         - es_core_news_sm/LICENSES_SOURCES
@@ -1160,6 +1182,7 @@ outputs:
       summary: Spanish transformer pipeline (Transformer(name='dccuchile/bert-base-spanish-wwm-cased', piece_encoder='bert-wordpiece', stride=112, type='bert', width=768, window=158, vocab_size=31002)).
       description: |-
         Components: transformer, morphologizer, parser, attribute_ruler, lemmatizer.
+      license: MIT
       license_file:
         - es_dep_news_trf/LICENSE
         - es_dep_news_trf/LICENSES_SOURCES
@@ -1195,6 +1218,7 @@ outputs:
       summary: Finnish pipeline optimized for CPU.
       description: |-
         Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+      license: MIT
       license_file:
         - fi_core_news_lg/LICENSE
         - fi_core_news_lg/LICENSES_SOURCES
@@ -1228,6 +1252,7 @@ outputs:
       summary: Finnish pipeline optimized for CPU.
       description: |-
         Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+      license: MIT
       license_file:
         - fi_core_news_md/LICENSE
         - fi_core_news_md/LICENSES_SOURCES
@@ -1261,6 +1286,7 @@ outputs:
       summary: Finnish pipeline optimized for CPU.
       description: |-
         Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+      license: MIT
       license_file:
         - fi_core_news_sm/LICENSE
         - fi_core_news_sm/LICENSES_SOURCES
@@ -1296,6 +1322,7 @@ outputs:
       summary: French pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler, lemmatizer.
+      license: MIT
       license_file:
         - fr_core_news_lg/LICENSE
         - fr_core_news_lg/LICENSES_SOURCES
@@ -1329,6 +1356,7 @@ outputs:
       summary: French pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler, lemmatizer.
+      license: MIT
       license_file:
         - fr_core_news_md/LICENSE
         - fr_core_news_md/LICENSES_SOURCES
@@ -1362,6 +1390,7 @@ outputs:
       summary: French pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler, lemmatizer.
+      license: MIT
       license_file:
         - fr_core_news_sm/LICENSE
         - fr_core_news_sm/LICENSES_SOURCES
@@ -1399,6 +1428,7 @@ outputs:
       summary: French transformer pipeline (Transformer(name='camembert-base', piece_encoder='camembert-sentencepiece', stride=128, type='camembert', width=768, window=168, vocab_size=32005)).
       description: |-
         Components: transformer, morphologizer, parser, attribute_ruler, lemmatizer.
+      license: MIT
       license_file:
         - fr_dep_news_trf/LICENSE
         - fr_dep_news_trf/LICENSES_SOURCES
@@ -1434,6 +1464,7 @@ outputs:
       summary: Croatian pipeline optimized for CPU.
       description: |-
         Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+      license: MIT
       license_file:
         - hr_core_news_lg/LICENSE
         - hr_core_news_lg/LICENSES_SOURCES
@@ -1467,6 +1498,7 @@ outputs:
       summary: Croatian pipeline optimized for CPU.
       description: |-
         Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+      license: MIT
       license_file:
         - hr_core_news_md/LICENSE
         - hr_core_news_md/LICENSES_SOURCES
@@ -1500,6 +1532,7 @@ outputs:
       summary: Croatian pipeline optimized for CPU.
       description: |-
         Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+      license: MIT
       license_file:
         - hr_core_news_sm/LICENSE
         - hr_core_news_sm/LICENSES_SOURCES
@@ -1535,6 +1568,7 @@ outputs:
       summary: Italian pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+      license: MIT
       license_file:
         - it_core_news_lg/LICENSE
         - it_core_news_lg/LICENSES_SOURCES
@@ -1568,6 +1602,7 @@ outputs:
       summary: Italian pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+      license: MIT
       license_file:
         - it_core_news_md/LICENSE
         - it_core_news_md/LICENSES_SOURCES
@@ -1601,6 +1636,7 @@ outputs:
       summary: Italian pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+      license: MIT
       license_file:
         - it_core_news_sm/LICENSE
         - it_core_news_sm/LICENSES_SOURCES
@@ -1638,6 +1674,7 @@ outputs:
       summary: Japanese pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler.
+      license: MIT
       license_file:
         - ja_core_news_lg/LICENSE
         - ja_core_news_lg/LICENSES_SOURCES
@@ -1673,6 +1710,7 @@ outputs:
       summary: Japanese pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler.
+      license: MIT
       license_file:
         - ja_core_news_md/LICENSE
         - ja_core_news_md/LICENSES_SOURCES
@@ -1708,6 +1746,7 @@ outputs:
       summary: Japanese pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler.
+      license: MIT
       license_file:
         - ja_core_news_sm/LICENSE
         - ja_core_news_sm/LICENSES_SOURCES
@@ -1744,6 +1783,7 @@ outputs:
       summary: Japanese transformer pipeline (Transformer(name='cl-tohoku/bert-base-japanese-char-v2', piece_encoder='char', stride=160, type='bert', width=768, window=216, vocab_size=6144)).
       description: |-
         Components: transformer, morphologizer, parser, ner.
+      license: MIT
       license_file:
         - ja_core_news_trf/LICENSE
         - ja_core_news_trf/LICENSES_SOURCES
@@ -1779,6 +1819,7 @@ outputs:
       summary: Korean pipeline optimized for CPU.
       description: |-
         Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+      license: MIT
       license_file:
         - ko_core_news_lg/LICENSE
         - ko_core_news_lg/LICENSES_SOURCES
@@ -1812,6 +1853,7 @@ outputs:
       summary: Korean pipeline optimized for CPU.
       description: |-
         Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+      license: MIT
       license_file:
         - ko_core_news_md/LICENSE
         - ko_core_news_md/LICENSES_SOURCES
@@ -1845,6 +1887,7 @@ outputs:
       summary: Korean pipeline optimized for CPU.
       description: |-
         Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+      license: MIT
       license_file:
         - ko_core_news_sm/LICENSE
         - ko_core_news_sm/LICENSES_SOURCES
@@ -1880,6 +1923,7 @@ outputs:
       summary: Lithuanian pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+      license: MIT
       license_file:
         - lt_core_news_lg/LICENSE
         - lt_core_news_lg/LICENSES_SOURCES
@@ -1913,6 +1957,7 @@ outputs:
       summary: Lithuanian pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+      license: MIT
       license_file:
         - lt_core_news_md/LICENSE
         - lt_core_news_md/LICENSES_SOURCES
@@ -1946,6 +1991,7 @@ outputs:
       summary: Lithuanian pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+      license: MIT
       license_file:
         - lt_core_news_sm/LICENSE
         - lt_core_news_sm/LICENSES_SOURCES
@@ -1981,6 +2027,7 @@ outputs:
       summary: Macedonian pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler, lemmatizer.
+      license: MIT
       license_file:
         - mk_core_news_lg/LICENSE
         - mk_core_news_lg/LICENSES_SOURCES
@@ -2014,6 +2061,7 @@ outputs:
       summary: Macedonian pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler, lemmatizer.
+      license: MIT
       license_file:
         - mk_core_news_md/LICENSE
         - mk_core_news_md/LICENSES_SOURCES
@@ -2047,6 +2095,7 @@ outputs:
       summary: Macedonian pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, parser, senter, ner, attribute_ruler, lemmatizer.
+      license: MIT
       license_file:
         - mk_core_news_sm/LICENSE
         - mk_core_news_sm/LICENSES_SOURCES
@@ -2082,6 +2131,7 @@ outputs:
       summary: Norwegian (Bokmål) pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
+      license: MIT
       license_file:
         - nb_core_news_lg/LICENSE
         - nb_core_news_lg/LICENSES_SOURCES
@@ -2115,6 +2165,7 @@ outputs:
       summary: Norwegian (Bokmål) pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
+      license: MIT
       license_file:
         - nb_core_news_md/LICENSE
         - nb_core_news_md/LICENSES_SOURCES
@@ -2148,6 +2199,7 @@ outputs:
       summary: Norwegian (Bokmål) pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
+      license: MIT
       license_file:
         - nb_core_news_sm/LICENSE
         - nb_core_news_sm/LICENSES_SOURCES
@@ -2183,6 +2235,7 @@ outputs:
       summary: Dutch pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+      license: MIT
       license_file:
         - nl_core_news_lg/LICENSE
         - nl_core_news_lg/LICENSES_SOURCES
@@ -2216,6 +2269,7 @@ outputs:
       summary: Dutch pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+      license: MIT
       license_file:
         - nl_core_news_md/LICENSE
         - nl_core_news_md/LICENSES_SOURCES
@@ -2249,6 +2303,7 @@ outputs:
       summary: Dutch pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+      license: MIT
       license_file:
         - nl_core_news_sm/LICENSE
         - nl_core_news_sm/LICENSES_SOURCES
@@ -2284,6 +2339,7 @@ outputs:
       summary: Polish pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), tagger, senter, ner.
+      license: MIT
       license_file:
         - pl_core_news_lg/LICENSE
         - pl_core_news_lg/LICENSES_SOURCES
@@ -2317,6 +2373,7 @@ outputs:
       summary: Polish pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), tagger, senter, ner.
+      license: MIT
       license_file:
         - pl_core_news_md/LICENSE
         - pl_core_news_md/LICENSES_SOURCES
@@ -2350,6 +2407,7 @@ outputs:
       summary: Polish pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), tagger, senter, ner.
+      license: MIT
       license_file:
         - pl_core_news_sm/LICENSE
         - pl_core_news_sm/LICENSES_SOURCES
@@ -2385,6 +2443,7 @@ outputs:
       summary: Portuguese pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
+      license: MIT
       license_file:
         - pt_core_news_lg/LICENSE
         - pt_core_news_lg/LICENSES_SOURCES
@@ -2418,6 +2477,7 @@ outputs:
       summary: Portuguese pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
+      license: MIT
       license_file:
         - pt_core_news_md/LICENSE
         - pt_core_news_md/LICENSES_SOURCES
@@ -2451,6 +2511,7 @@ outputs:
       summary: Portuguese pipeline optimized for CPU.
       description: |-
         Components: tok2vec, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
+      license: MIT
       license_file:
         - pt_core_news_sm/LICENSE
         - pt_core_news_sm/LICENSES_SOURCES
@@ -2486,6 +2547,7 @@ outputs:
       summary: Romanian pipeline optimized for CPU.
       description: |-
         Components: tok2vec, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
+      license: MIT
       license_file:
         - ro_core_news_lg/LICENSE
         - ro_core_news_lg/LICENSES_SOURCES
@@ -2519,6 +2581,7 @@ outputs:
       summary: Romanian pipeline optimized for CPU.
       description: |-
         Components: tok2vec, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
+      license: MIT
       license_file:
         - ro_core_news_md/LICENSE
         - ro_core_news_md/LICENSES_SOURCES
@@ -2552,6 +2615,7 @@ outputs:
       summary: Romanian pipeline optimized for CPU.
       description: |-
         Components: tok2vec, tagger, parser, lemmatizer (trainable_lemmatizer), senter, ner, attribute_ruler.
+      license: MIT
       license_file:
         - ro_core_news_sm/LICENSE
         - ro_core_news_sm/LICENSES_SOURCES
@@ -2587,6 +2651,7 @@ outputs:
       summary: Slovenian pipeline optimized for CPU.
       description: |-
         Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), attribute_ruler, senter, ner.
+      license: MIT
       license_file:
         - sl_core_news_lg/LICENSE
         - sl_core_news_lg/LICENSES_SOURCES
@@ -2620,6 +2685,7 @@ outputs:
       summary: Slovenian pipeline optimized for CPU.
       description: |-
         Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), attribute_ruler, senter, ner.
+      license: MIT
       license_file:
         - sl_core_news_md/LICENSE
         - sl_core_news_md/LICENSES_SOURCES
@@ -2653,6 +2719,7 @@ outputs:
       summary: Slovenian pipeline optimized for CPU.
       description: |-
         Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), attribute_ruler, senter, ner.
+      license: MIT
       license_file:
         - sl_core_news_sm/LICENSE
         - sl_core_news_sm/LICENSES_SOURCES
@@ -2689,6 +2756,7 @@ outputs:
       summary: Slovenian transformer pipeline (Transformer(name='EMBEDDIA/sloberta', piece_encoder='camembert-sentencepiece', stride=128, type='camembert', width=768, window=168, vocab_size=32005)).
       description: |-
         Components: transformer, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), ner.
+      license: MIT
       license_file:
         - sl_core_news_trf/LICENSE
         - sl_core_news_trf/LICENSES_SOURCES
@@ -2724,6 +2792,7 @@ outputs:
       summary: Swedish pipeline optimized for CPU.
       description: |-
         Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+      license: MIT
       license_file:
         - sv_core_news_lg/LICENSE
         - sv_core_news_lg/LICENSES_SOURCES
@@ -2757,6 +2826,7 @@ outputs:
       summary: Swedish pipeline optimized for CPU.
       description: |-
         Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+      license: MIT
       license_file:
         - sv_core_news_md/LICENSE
         - sv_core_news_md/LICENSES_SOURCES
@@ -2790,6 +2860,7 @@ outputs:
       summary: Swedish pipeline optimized for CPU.
       description: |-
         Components: tok2vec, tagger, morphologizer, parser, lemmatizer (trainable_lemmatizer), senter, ner.
+      license: MIT
       license_file:
         - sv_core_news_sm/LICENSE
         - sv_core_news_sm/LICENSES_SOURCES
@@ -2825,6 +2896,7 @@ outputs:
       summary: Multi-language pipeline optimized for CPU.
       description: |-
         Components: ner.
+      license: MIT
       license_file:
         - xx_ent_wiki_sm/LICENSE
         - xx_ent_wiki_sm/LICENSES_SOURCES
@@ -2858,6 +2930,7 @@ outputs:
       summary: Multi-language pipeline optimized for CPU.
       description: |-
         Components: senter.
+      license: MIT
       license_file:
         - xx_sent_ud_sm/LICENSE
         - xx_sent_ud_sm/LICENSES_SOURCES
@@ -2894,6 +2967,7 @@ outputs:
       summary: Chinese pipeline optimized for CPU.
       description: |-
         Components: tok2vec, tagger, parser, senter, ner, attribute_ruler.
+      license: MIT
       license_file:
         - zh_core_web_lg/LICENSE
         - zh_core_web_lg/LICENSES_SOURCES
@@ -2928,6 +3002,7 @@ outputs:
       summary: Chinese pipeline optimized for CPU.
       description: |-
         Components: tok2vec, tagger, parser, senter, ner, attribute_ruler.
+      license: MIT
       license_file:
         - zh_core_web_md/LICENSE
         - zh_core_web_md/LICENSES_SOURCES
@@ -2962,6 +3037,7 @@ outputs:
       summary: Chinese pipeline optimized for CPU.
       description: |-
         Components: tok2vec, tagger, parser, senter, ner, attribute_ruler.
+      license: MIT
       license_file:
         - zh_core_web_sm/LICENSE
         - zh_core_web_sm/LICENSES_SOURCES
@@ -2997,6 +3073,7 @@ outputs:
       summary: Chinese transformer pipeline (Transformer(name='bert-base-chinese', piece_encoder='bert-wordpiece', stride=152, type='bert', width=768, window=208, vocab_size=21128)).
       description: |-
         Components: transformer, tagger, parser, ner, attribute_ruler.
+      license: MIT
       license_file:
         - zh_core_web_trf/LICENSE
         - zh_core_web_trf/LICENSES_SOURCES
