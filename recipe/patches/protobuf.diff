@@ -2,11 +2,13 @@ diff --git a/meta.json b/meta.json
 index 66ca38b..92d017f 100644
 --- a/meta.json
 +++ b/meta.json
-@@ -605,6 +605,5 @@
+@@ -604,7 +604,6 @@
+   ],
    "requirements":[
      "spacy-curated-transformers>=0.2.2,<1.0.0",
-     "sentencepiece>=0.1.91,!=0.1.92",
+-    "sentencepiece>=0.1.91,!=0.1.92",
 -    "protobuf<3.21.0"
++    "sentencepiece>=0.1.91,!=0.1.92"
    ]
  }
 \ No newline at end of file
