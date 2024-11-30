@@ -50,6 +50,7 @@ outputs:
       noarch: python
       script:
         - cd << m.lang >>_<< m.name >>
+        - {{ PYTHON }} {{ RECIPE_DIR }}/patch_meta.py
         - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:

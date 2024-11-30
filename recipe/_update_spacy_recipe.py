@@ -40,6 +40,7 @@ EXTRA_PKG_REQS: dict[tuple[str, str], list[str]] = {
     ("fr", "dep_news_trf"): ["tokenizers >=0.11.1,!=0.11.3,<0.13"]
 }
 
+# keep this synced with ``patch_meta.py``
 REPLACE_REQS: dict[str, str] = {
     # https://github.com/conda-forge/spacy-models-feedstock/pull/7#issuecomment-2508892104
     # 99% convinced that this protobuf cap is based on some ancient issue that
