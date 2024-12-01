@@ -6,6 +6,7 @@
 # see https://github.com/explosion/spacy-models/blob/master/compatibility.json
 # but the pattern _generally_ seems to be x.x
 {% set spacy = "==" + (".".join(version.split(".")[:2])) + ".*" %}
+{% set python_min = python_min|default("3.9") %}
 
 package:
   name: spacy-models
@@ -13,7 +14,7 @@ package:
 
 source:
   - url: https://raw.githubusercontent.com/explosion/spaCy/master/LICENSE
-    sha256: c07800e058b1b544eb9d47dd81687582fe6830c1ddc47f57521fc93628685915
+    sha256: 3f4378e67708fecacd3e27651c8bc0f977cf20789e19da0d81a2840e7cf573a2
 <% for lang, metas in lang_metas.items() %>
 {% if spacy_lang == "<< lang >>" <% if not loop.index0 %> or not (spacy_lang is defined) <% endif %>%}
 <%- for p, m in metas.items() %>
@@ -30,11 +31,11 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
-  run:
     - setuptools
-    - python >=3.6
+  run:
+    - python >={{ python_min }}
 
 test:
   commands:
@@ -48,13 +49,16 @@ outputs:
     build:
       noarch: python
       script:
-        - cd << m.lang >>_<< m.name >> && {{ PYTHON }} -m pip install . -vv --no-deps
+        - cd << m.lang >>_<< m.name >>
+        - {{ PYTHON }} {{ RECIPE_DIR }}/patch_meta.py
+        - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
-        - python >=3.6
         - pip
+        - python {{ python_min }}
+        - setuptools
       run:
-        - python >=3.6
+        - python >={{ python_min }}
         - spacy {{ spacy }}<% for req in m.requirements %>
         - << reqtify(req)  >>
         <%- endfor %>
@@ -62,6 +66,7 @@ outputs:
       imports:
         - << m.lang >>_<< m.name >>
       requires:
+        - python {{ python_min }}
         - pip
       commands:
         <%- if skip_pip_check.get(m.lang, {}).get(m.name) %>
@@ -76,6 +81,7 @@ outputs:
       summary: << m.description.split(". ", 1)[0].strip() >>.
       description: |-
         << m.description.split(". ", 1)[1].strip() >>
+      license: MIT
       license_file:
         - << m.lang >>_<< m.name >>/LICENSE
         - << m.lang >>_<< m.name >>/LICENSES_SOURCES
