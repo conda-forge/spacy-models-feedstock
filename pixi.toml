@@ -1,0 +1,252 @@
+# -*- mode: toml -*-
+# This file was generated automatically from conda-smithy. To update this configuration,
+# update the conda-forge.yml and/or the recipe/meta.yaml.
+"$schema" = "https://pixi.sh/v0.59.0/schema/manifest/schema.json"
+
+[workspace]
+name = "spacy-models-feedstock"
+version = "2026.11.6"  # conda-smithy version used to generate this file
+description = "Pixi configuration for conda-forge/spacy-models-feedstock"
+authors = ["@conda-forge/spacy-models"]
+channels = ["conda-forge"]
+platforms = ["linux-64", "osx-64", "win-64"]
+requires-pixi = ">=0.59.0"
+
+[tasks.build-locally]
+cmd = "pixi exec --force-reinstall --list='^python$' python ./build-locally.py"
+description = "Build packages locally using the same setup scripts used in conda-forge's CI"
+[tasks.smithy]
+cmd = "pixi exec --force-reinstall --list='^conda-smithy$' conda-smithy"
+description = "Run conda-smithy. Pass necessary arguments."
+[tasks.rerender]
+cmd = "pixi exec --force-reinstall --list='^conda-smithy$' conda-smithy rerender"
+description = "Rerender the feedstock."
+
+[tasks.lint]
+cmd = "pixi exec --list='^conda-smithy$' conda-smithy lint --conda-forge recipe"
+description = "Lint the feedstock recipe"
+
+[feature.build.dependencies]
+conda-build = ">=26.3"
+conda-forge-ci-setup = "4.*"
+python = "3.14.*"
+rattler-build = "*"
+
+[feature.build.tasks.inspect-all]
+cmd = "inspect_artifacts --all-packages"
+description = "List contents of all packages found in rattler-build build directory."
+[feature.build.tasks.build]
+cmd = "rattler-build build --recipe recipe"
+description = "Build spacy-models-feedstock directly (without setup scripts), no particular variant specified"
+[feature.build.tasks."build-linux_64_spacy_langca"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_spacy_langca.yaml "
+description = "Build spacy-models-feedstock with variant linux_64_spacy_langca directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_spacy_langca"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_spacy_langca.yaml "
+description = "Debug spacy-models-feedstock with variant linux_64_spacy_langca directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_spacy_langca"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_spacy_langca.yaml"
+description = "List contents of spacy-models-feedstock packages built for variant linux_64_spacy_langca"
+[feature.build.tasks."build-linux_64_spacy_langda"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_spacy_langda.yaml "
+description = "Build spacy-models-feedstock with variant linux_64_spacy_langda directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_spacy_langda"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_spacy_langda.yaml "
+description = "Debug spacy-models-feedstock with variant linux_64_spacy_langda directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_spacy_langda"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_spacy_langda.yaml"
+description = "List contents of spacy-models-feedstock packages built for variant linux_64_spacy_langda"
+[feature.build.tasks."build-linux_64_spacy_langde"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_spacy_langde.yaml "
+description = "Build spacy-models-feedstock with variant linux_64_spacy_langde directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_spacy_langde"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_spacy_langde.yaml "
+description = "Debug spacy-models-feedstock with variant linux_64_spacy_langde directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_spacy_langde"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_spacy_langde.yaml"
+description = "List contents of spacy-models-feedstock packages built for variant linux_64_spacy_langde"
+[feature.build.tasks."build-linux_64_spacy_langel"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_spacy_langel.yaml "
+description = "Build spacy-models-feedstock with variant linux_64_spacy_langel directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_spacy_langel"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_spacy_langel.yaml "
+description = "Debug spacy-models-feedstock with variant linux_64_spacy_langel directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_spacy_langel"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_spacy_langel.yaml"
+description = "List contents of spacy-models-feedstock packages built for variant linux_64_spacy_langel"
+[feature.build.tasks."build-linux_64_spacy_langen"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_spacy_langen.yaml "
+description = "Build spacy-models-feedstock with variant linux_64_spacy_langen directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_spacy_langen"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_spacy_langen.yaml "
+description = "Debug spacy-models-feedstock with variant linux_64_spacy_langen directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_spacy_langen"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_spacy_langen.yaml"
+description = "List contents of spacy-models-feedstock packages built for variant linux_64_spacy_langen"
+[feature.build.tasks."build-linux_64_spacy_langes"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_spacy_langes.yaml "
+description = "Build spacy-models-feedstock with variant linux_64_spacy_langes directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_spacy_langes"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_spacy_langes.yaml "
+description = "Debug spacy-models-feedstock with variant linux_64_spacy_langes directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_spacy_langes"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_spacy_langes.yaml"
+description = "List contents of spacy-models-feedstock packages built for variant linux_64_spacy_langes"
+[feature.build.tasks."build-linux_64_spacy_langfi"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_spacy_langfi.yaml "
+description = "Build spacy-models-feedstock with variant linux_64_spacy_langfi directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_spacy_langfi"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_spacy_langfi.yaml "
+description = "Debug spacy-models-feedstock with variant linux_64_spacy_langfi directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_spacy_langfi"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_spacy_langfi.yaml"
+description = "List contents of spacy-models-feedstock packages built for variant linux_64_spacy_langfi"
+[feature.build.tasks."build-linux_64_spacy_langfr"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_spacy_langfr.yaml "
+description = "Build spacy-models-feedstock with variant linux_64_spacy_langfr directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_spacy_langfr"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_spacy_langfr.yaml "
+description = "Debug spacy-models-feedstock with variant linux_64_spacy_langfr directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_spacy_langfr"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_spacy_langfr.yaml"
+description = "List contents of spacy-models-feedstock packages built for variant linux_64_spacy_langfr"
+[feature.build.tasks."build-linux_64_spacy_langhr"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_spacy_langhr.yaml "
+description = "Build spacy-models-feedstock with variant linux_64_spacy_langhr directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_spacy_langhr"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_spacy_langhr.yaml "
+description = "Debug spacy-models-feedstock with variant linux_64_spacy_langhr directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_spacy_langhr"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_spacy_langhr.yaml"
+description = "List contents of spacy-models-feedstock packages built for variant linux_64_spacy_langhr"
+[feature.build.tasks."build-linux_64_spacy_langit"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_spacy_langit.yaml "
+description = "Build spacy-models-feedstock with variant linux_64_spacy_langit directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_spacy_langit"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_spacy_langit.yaml "
+description = "Debug spacy-models-feedstock with variant linux_64_spacy_langit directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_spacy_langit"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_spacy_langit.yaml"
+description = "List contents of spacy-models-feedstock packages built for variant linux_64_spacy_langit"
+[feature.build.tasks."build-linux_64_spacy_langja"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_spacy_langja.yaml "
+description = "Build spacy-models-feedstock with variant linux_64_spacy_langja directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_spacy_langja"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_spacy_langja.yaml "
+description = "Debug spacy-models-feedstock with variant linux_64_spacy_langja directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_spacy_langja"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_spacy_langja.yaml"
+description = "List contents of spacy-models-feedstock packages built for variant linux_64_spacy_langja"
+[feature.build.tasks."build-linux_64_spacy_langko"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_spacy_langko.yaml "
+description = "Build spacy-models-feedstock with variant linux_64_spacy_langko directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_spacy_langko"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_spacy_langko.yaml "
+description = "Debug spacy-models-feedstock with variant linux_64_spacy_langko directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_spacy_langko"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_spacy_langko.yaml"
+description = "List contents of spacy-models-feedstock packages built for variant linux_64_spacy_langko"
+[feature.build.tasks."build-linux_64_spacy_langlt"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_spacy_langlt.yaml "
+description = "Build spacy-models-feedstock with variant linux_64_spacy_langlt directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_spacy_langlt"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_spacy_langlt.yaml "
+description = "Debug spacy-models-feedstock with variant linux_64_spacy_langlt directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_spacy_langlt"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_spacy_langlt.yaml"
+description = "List contents of spacy-models-feedstock packages built for variant linux_64_spacy_langlt"
+[feature.build.tasks."build-linux_64_spacy_langmk"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_spacy_langmk.yaml "
+description = "Build spacy-models-feedstock with variant linux_64_spacy_langmk directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_spacy_langmk"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_spacy_langmk.yaml "
+description = "Debug spacy-models-feedstock with variant linux_64_spacy_langmk directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_spacy_langmk"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_spacy_langmk.yaml"
+description = "List contents of spacy-models-feedstock packages built for variant linux_64_spacy_langmk"
+[feature.build.tasks."build-linux_64_spacy_langnb"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_spacy_langnb.yaml "
+description = "Build spacy-models-feedstock with variant linux_64_spacy_langnb directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_spacy_langnb"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_spacy_langnb.yaml "
+description = "Debug spacy-models-feedstock with variant linux_64_spacy_langnb directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_spacy_langnb"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_spacy_langnb.yaml"
+description = "List contents of spacy-models-feedstock packages built for variant linux_64_spacy_langnb"
+[feature.build.tasks."build-linux_64_spacy_langnl"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_spacy_langnl.yaml "
+description = "Build spacy-models-feedstock with variant linux_64_spacy_langnl directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_spacy_langnl"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_spacy_langnl.yaml "
+description = "Debug spacy-models-feedstock with variant linux_64_spacy_langnl directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_spacy_langnl"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_spacy_langnl.yaml"
+description = "List contents of spacy-models-feedstock packages built for variant linux_64_spacy_langnl"
+[feature.build.tasks."build-linux_64_spacy_langpl"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_spacy_langpl.yaml "
+description = "Build spacy-models-feedstock with variant linux_64_spacy_langpl directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_spacy_langpl"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_spacy_langpl.yaml "
+description = "Debug spacy-models-feedstock with variant linux_64_spacy_langpl directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_spacy_langpl"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_spacy_langpl.yaml"
+description = "List contents of spacy-models-feedstock packages built for variant linux_64_spacy_langpl"
+[feature.build.tasks."build-linux_64_spacy_langpt"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_spacy_langpt.yaml "
+description = "Build spacy-models-feedstock with variant linux_64_spacy_langpt directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_spacy_langpt"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_spacy_langpt.yaml "
+description = "Debug spacy-models-feedstock with variant linux_64_spacy_langpt directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_spacy_langpt"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_spacy_langpt.yaml"
+description = "List contents of spacy-models-feedstock packages built for variant linux_64_spacy_langpt"
+[feature.build.tasks."build-linux_64_spacy_langro"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_spacy_langro.yaml "
+description = "Build spacy-models-feedstock with variant linux_64_spacy_langro directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_spacy_langro"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_spacy_langro.yaml "
+description = "Debug spacy-models-feedstock with variant linux_64_spacy_langro directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_spacy_langro"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_spacy_langro.yaml"
+description = "List contents of spacy-models-feedstock packages built for variant linux_64_spacy_langro"
+[feature.build.tasks."build-linux_64_spacy_langsl"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_spacy_langsl.yaml "
+description = "Build spacy-models-feedstock with variant linux_64_spacy_langsl directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_spacy_langsl"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_spacy_langsl.yaml "
+description = "Debug spacy-models-feedstock with variant linux_64_spacy_langsl directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_spacy_langsl"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_spacy_langsl.yaml"
+description = "List contents of spacy-models-feedstock packages built for variant linux_64_spacy_langsl"
+[feature.build.tasks."build-linux_64_spacy_langsv"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_spacy_langsv.yaml "
+description = "Build spacy-models-feedstock with variant linux_64_spacy_langsv directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_spacy_langsv"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_spacy_langsv.yaml "
+description = "Debug spacy-models-feedstock with variant linux_64_spacy_langsv directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_spacy_langsv"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_spacy_langsv.yaml"
+description = "List contents of spacy-models-feedstock packages built for variant linux_64_spacy_langsv"
+[feature.build.tasks."build-linux_64_spacy_langxx"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_spacy_langxx.yaml "
+description = "Build spacy-models-feedstock with variant linux_64_spacy_langxx directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_spacy_langxx"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_spacy_langxx.yaml "
+description = "Debug spacy-models-feedstock with variant linux_64_spacy_langxx directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_spacy_langxx"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_spacy_langxx.yaml"
+description = "List contents of spacy-models-feedstock packages built for variant linux_64_spacy_langxx"
+[feature.build.tasks."build-linux_64_spacy_langzh"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_spacy_langzh.yaml "
+description = "Build spacy-models-feedstock with variant linux_64_spacy_langzh directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_spacy_langzh"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_spacy_langzh.yaml "
+description = "Debug spacy-models-feedstock with variant linux_64_spacy_langzh directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_spacy_langzh"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_spacy_langzh.yaml"
+description = "List contents of spacy-models-feedstock packages built for variant linux_64_spacy_langzh"
+
+[environments]
+build = ["build"]
+# This is a copy of 'build', to be enabled by build_steps.sh during Docker builds
+# __PLATFORM_SPECIFIC_ENV__ = ["build"]
