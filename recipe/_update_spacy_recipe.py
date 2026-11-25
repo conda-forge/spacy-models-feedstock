@@ -35,9 +35,9 @@ EXTRA_SUBREQS: dict[str, list[str]] = {
 }
 
 EXTRA_PKG_REQS: dict[tuple[str, str], list[str]] = {
-    # TODO: investigate
-    # ImportError: tokenizers>=0.11.1,!=0.11.3,<0.13 is required for a normal functioning of this module, but found tokenizers==0.13.2.
-    ("fr", "dep_news_trf"): ["tokenizers >=0.11.1,!=0.11.3,<0.13"]
+    # Example (keep this for the future)
+    #
+    # ("fr", "dep_news_trf"): ["tokenizers >=0.11.1,!=0.11.3,<0.13"]
 }
 
 # keep this synced with ``patch_meta.py``
